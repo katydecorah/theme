@@ -1,0 +1,15 @@
+<div class="footer" id="hello">
+  <div class="container">
+    <div class="bio">
+      <div class="bio-img">
+        {% include img.html src=site.image class="bio-img-container img-half" alt=site.author.name %}
+      </div>
+      <div class="bio-details">
+        <div>{{site.bio | markdownify}}</div>
+        <div class="nav">{% for link in site.links %}{% if link.position == 'bottom' %}{% assign icon = link.icon | prepend: 'icons/' | append: '.svg' %}
+          <a href="{{ link.url }}" aria-label="{{ link.text }}" title="{{ link.text }}" class="nav-link">{% include {{icon}} %}</a>{% endif %}{% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
