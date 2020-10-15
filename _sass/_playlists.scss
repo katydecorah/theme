@@ -1,7 +1,11 @@
 .playlist-meta {
-  margin-bottom: 1em;
-  margin-top: -1em;
+  margin-bottom: 3em;
   text-align: center;
+
+  svg {
+    vertical-align: sub;
+    margin-right: 0.25em;
+  }
 }
 
 .playlist-nostalgia {
@@ -17,6 +21,8 @@
   -moz-columns: 2 290px;
   -webkit-columns: 2 290px;
   columns: 2 290px;
+
+  margin-bottom: 2em;
 }
 
 .playlist-track {
@@ -33,7 +39,7 @@
 }
 
 .track-meta {
-  color: $text-color-light;
+  color: var(--text-accent);
   font-size: $font-xs;
 }
 
@@ -46,9 +52,9 @@
   padding-bottom: 1em;
 
   &:nth-child(even) {
-    background: rgba(complement($accent), 0.4);
-    border-bottom: 1px dashed $body-bg;
-    border-top: 1px dashed $body-bg;
+    background: var(--text-accent);
+    border-bottom: 1px dashed var(--background-accent);
+    border-top: 1px dashed var(--background-accent);
   }
 
   &:target {

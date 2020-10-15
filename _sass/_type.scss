@@ -48,6 +48,7 @@ h1,
 
   font-size: $h1-size;
   margin-top: 0;
+  margin-bottom: 1em;
 }
 
 h2,
@@ -134,41 +135,29 @@ ol {
 }
 
 hr {
-  border: 1px solid $white;
+  border: 1px solid var(--background-accent);
   margin: 2em auto;
   max-width: 70%;
 }
 
 blockquote {
-  margin: 2em auto;
+  margin: 1em auto;
   position: relative;
+  font-style: italic;
+  background: var(--background-accent);
+  padding: 1em;
+  border-radius: $border-radius;
 
-  p {
-    @extend %fancy-type;
-
-    font-size: 1.25em;
+  > p:last-child {
+    margin-bottom: 0;
   }
 
   cite {
     @extend %code-type;
 
     display: block;
-    font-size: 0.5em;
+    font-size: $font-small;
     font-style: normal;
-  }
-
-  &::before {
-    color: darken($accent, 10%);
-    content: "\201C";
-    display: block;
-    font-size: 8em;
-    height: 1em;
-    left: -0.1em;
-    line-height: 1;
-    position: absolute;
-    top: -0.2em;
-    width: 1em;
-    z-index: -1;
   }
 }
 
@@ -179,6 +168,6 @@ blockquote {
 }
 
 ::selection {
-  background: $fancy-accent;
-  color: $white;
+  background: var(--text-color);
+  color: var(--background-accent);
 }

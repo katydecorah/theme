@@ -16,9 +16,11 @@
 .adventure {
   @extend %flex;
 
-  background: $white;
-  display: block;
+  background: var(--background-accent);
+  height: 188px;
   margin-bottom: 1em;
+  text-decoration: none;
+  border-radius: $border-radius;
 
   @include breakpoint(small) {
     padding: 1em;
@@ -27,20 +29,24 @@
   &:hover {
     text-decoration: none;
   }
+
+  picture,
+  picture img {
+    height: inherit;
+    margin: 0;
+    object-fit: cover;
+    width: 100%;
+    border-radius: $border-radius 0 0 $border-radius;
+  }
 }
 
-.adventure-image,
+.adventure picture,
 .adventure-map {
   width: 25%;
 
   @include breakpoint(small) {
     display: none;
   }
-}
-
-.adventure-image {
-  background-size: cover;
-  padding-bottom: 25%;
 }
 
 .adventure-map {
@@ -62,8 +68,13 @@
   }
 
   .adventure-meta {
-    color: $text-color;
+    color: var(--text-color);
     font-size: $font-small;
     margin-bottom: 0.5em;
+
+    svg {
+      margin-right: 0.25em;
+      vertical-align: middle;
+    }
   }
 }
