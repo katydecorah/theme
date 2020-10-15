@@ -101,7 +101,7 @@
 
   .post-emoji {
     display: inline-block;
-    position: relative;
+    position: absolute;
     text-indent: -1.5em;
     top: 0.25em;
 
@@ -163,6 +163,7 @@
   @extend %fancy-type;
 
   font-size: 1em;
+  position: relative;
 }
 
 .paginator {
