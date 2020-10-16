@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pretty-quick": "pretty-quick",
-    "lint": "stylelint \"_sass/**/*.scss\" --fix",
+    "lint": "stylelint \"_sass/**/*.scss\" --fix && eslint .",
     "test": "npm run lint"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/katydecorah/theme#readme",
   "devDependencies": {
+    "eslint": "^7.11.0",
     "feather-icons": "^4.28.0",
     "husky": "^4.3.0",
     "prettier": "^2.1.2",
