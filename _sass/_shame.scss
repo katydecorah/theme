@@ -1,17 +1,17 @@
 .books {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
   grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
   margin-bottom: 1em;
 }
 
 .book {
   display: block;
   img {
-    margin: 0;
     width: 100%;
-    object-fit: cover;
     height: 100%;
+    margin: 0;
+    object-fit: cover;
     object-position: right;
   }
 }

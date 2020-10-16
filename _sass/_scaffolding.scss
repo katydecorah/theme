@@ -25,7 +25,8 @@ a {
   color: var(--link);
   transition: var(--link-transition);
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--link-hover);
     transition: var(--link-transition);
   }
@@ -63,9 +64,9 @@ img {
 }
 
 .img-full {
-  margin-left: auto;
-  margin-right: auto;
   max-width: $container-width;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .img-half {
@@ -123,16 +124,4 @@ img {
 
 .rotate-left {
   transform: rotate(-90deg);
-}
-
-.img-half,
-.img-thirds,
-.img-fourths,
-.img-split-wide,
-.img-wide,
-.img-split-tall,
-.img-tall {
-  @include breakpoint(medium) {
-    //display: inline-block;
-  }
 }

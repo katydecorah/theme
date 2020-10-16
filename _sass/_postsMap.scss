@@ -4,22 +4,13 @@ $map-height: 8em;
   margin-bottom: 1em;
 
   @include breakpoint(medium) {
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+    position: relative;
     display: flex;
-    -webkit-box-pack: left;
-    -webkit-justify-content: left;
-    -ms-flex-pack: left;
+    align-items: center;
     justify-content: left;
+    height: $map-height;
     margin-top: -3em;
     overflow: hidden;
-    position: relative;
-    height: $map-height;
   }
 
   .container {
@@ -41,12 +32,12 @@ $map-height: 8em;
 }
 
 .post-map-header {
-  left: 0;
-  overflow: hidden;
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: $map-height;
+  overflow: hidden;
   background: var(--always-background);
 
   @include breakpoint(small) {
@@ -59,17 +50,17 @@ $map-height: 8em;
   max-width: none;
 
   @include breakpoint(medium) {
+    display: block;
+    height: $map-height;
+    margin-right: auto;
+    margin-left: auto;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100%;
-    display: block;
-    height: $map-height;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
 .post .photos .map-iceland {
-  background: var(--always-background);
   margin-bottom: 1em;
+  background: var(--always-background);
 }

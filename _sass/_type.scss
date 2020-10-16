@@ -1,11 +1,11 @@
 %body-type {
-  font-family: $body-font-family;
   font-weight: $body-font-weight;
+  font-family: $body-font-family;
 }
 
 %fancy-type {
-  font-family: $fancy-font-family;
   font-weight: $fancy-font-weight;
+  font-family: $fancy-font-family;
 }
 
 %headings-type {
@@ -26,29 +26,27 @@ em {
 
 .lead {
   font-size: 1.5em;
-  text-align: justify;
 }
 
 p {
-  margin-bottom: 1.3em;
   margin-top: 0;
+  margin-bottom: 1.3em;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  line-height: 1.2;
   margin: 1.414em 0 0.5em;
+  line-height: 1.2;
 }
 
 h1,
 .h1 {
   @extend %fancy-type;
-
-  font-size: $h1-size;
   margin-top: 0;
   margin-bottom: 1em;
+  font-size: $h1-size;
 }
 
 h2,
@@ -129,23 +127,23 @@ ol {
 }
 
 .unstyled {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 hr {
-  border: 1px solid var(--background-accent);
-  margin: 2em auto;
   max-width: 70%;
+  margin: 2em auto;
+  border: 1px solid var(--background-accent);
 }
 
 blockquote {
-  margin: 1em auto;
   position: relative;
+  margin: 1em auto;
+  padding: 1em;
   font-style: italic;
   background: var(--background-accent);
-  padding: 1em;
   border-radius: $border-radius;
 
   > p:last-child {
@@ -162,12 +160,12 @@ blockquote {
 }
 
 .big {
+  margin-bottom: 0.25em;
   font-size: 7em;
   line-height: 1;
-  margin-bottom: 0.25em;
 }
 
 ::selection {
-  background: var(--text-color);
   color: var(--background-accent);
+  background: var(--text-color);
 }

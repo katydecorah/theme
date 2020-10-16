@@ -1,92 +1,75 @@
-.page-adventure-map .map {
-  margin-bottom: -3.5em;
-  margin-top: -3.75em;
-}
+.page-adventure-map {
+  .map {
+    width: 100%;
+    min-height: 429px;
+    margin-top: -3.75em;
+    margin-bottom: -3.5em;
 
-.page-adventure-map .map {
-  min-height: 429px;
-  width: 100%;
+    .leaflet-popup-content,
+    .leaflet-popup-content-wrapper {
+      padding: 0;
+    }
 
-  .leaflet-popup-content,
-  .leaflet-popup-content-wrapper {
-    padding: 0;
+    h2 {
+      @extend %fancy-type;
+
+      margin: 0;
+      padding: 0.5em;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 0;
+      border-radius: 3px 3px 0 0;
+    }
   }
-
-  h2 {
-    @extend %fancy-type;
-
-    margin: 0;
-    padding: 0.5em;
-  }
-
-  img {
-    border-radius: 3px 3px 0 0;
-    margin: 0;
-    max-width: 100%;
-  }
-}
-
-.external-true h2::after {
-  content: "\f14c";
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: $font-xs;
-  margin-left: 3px;
-  text-rendering: auto;
-  transform: translate(0, 0);
 }
 
 .map-select {
-  background: var(--background-accent);
+  position: absolute;
+  top: 4.9em;
+  right: 0;
   bottom: 0;
-  font-size: $font-xs;
+  z-index: 100;
+  width: 200px;
   height: 450px;
   overflow: scroll;
-  position: absolute;
-  right: 0;
-  top: 4.9em;
-  width: 200px;
-  z-index: 100;
+  font-size: $font-xs;
+  background: var(--background-accent);
 
   .filter,
   .year-group {
     display: none;
   }
 
-  .filter:checked + .filter-label {
-    font-weight: bold;
-
-    + .year-group {
-      display: block;
-    }
-  }
-
   .filter-label {
-    background: var(--background-accent);
-    cursor: pointer;
     display: block;
     padding: 0.25em 1em;
+    background: var(--background-accent);
+    cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: var(--text-accent);
     }
   }
 
   .year-child {
-    cursor: pointer;
     padding: 0.2em 1em;
+    cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: var(--text-accent);
     }
   }
 }
 
 .map-attribution {
-  bottom: 1em;
-  color: var(--link-hover);
-  display: block;
-  font-size: 13px;
   position: absolute;
   right: 1em;
+  bottom: 1em;
+  display: block;
+  color: var(--link-hover);
+  font-size: 13px;
 }

@@ -1,21 +1,21 @@
 %btn {
-  border-radius: 2em;
-  color: var(--text-color);
   display: inline-block;
   padding: 0.25em 1em;
+  color: var(--text-color);
   text-decoration: none;
+  border-radius: 2em;
 }
 
 .btn {
   @extend %btn;
-
-  background: var(--background-accent);
-  font-size: $font-small;
   margin-bottom: 0.5em;
+  font-size: $font-small;
+  background: var(--background-accent);
 
-  &:hover {
-    text-decoration: none;
+  &:hover,
+  &:focus {
     color: var(--link);
+    text-decoration: none;
   }
 
   svg {
@@ -27,9 +27,9 @@
   }
 
   .icon-twitter {
-    left: -4px;
     position: relative;
     top: 4px;
+    left: -4px;
   }
 }
 
@@ -39,7 +39,8 @@
 
 .btn-disabled {
   color: var(--text-accent);
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--text-accent);
   }
 }

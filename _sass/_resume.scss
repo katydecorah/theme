@@ -1,7 +1,7 @@
 .page-resume {
   @media print {
     .post-meta-breadcrumbs {
-      margin-bottom: 0em;
+      margin-bottom: 0;
       margin-left: -0.25em;
     }
     .post-meta-breadcrumbs svg,
@@ -35,7 +35,8 @@
 
     a {
       color: var(--link);
-      &:hover {
+      &:hover,
+      &:focus {
         color: var(--link-hover);
       }
     }
@@ -49,11 +50,11 @@
   }
 
   h2 {
-    letter-spacing: 0.075em;
-    font-size: 1em;
-    text-transform: uppercase;
     margin-top: 0;
     color: var(--text-accent);
+    font-size: 1em;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
 
     @media screen {
       padding-right: 1em;
@@ -67,8 +68,8 @@
   }
 
   ul {
-    padding: 0;
     margin: 0;
+    padding: 0;
     list-style: none;
   }
 
@@ -77,8 +78,9 @@
   }
 
   li {
-    line-height: 1.3;
     display: block;
+    line-height: 1.3;
+
     @media screen {
       color: var(--text-accent);
 
@@ -92,9 +94,8 @@
     }
 
     li {
-      color: var(--text-color);
-
       display: inline;
+      color: var(--text-color);
     }
   }
 }

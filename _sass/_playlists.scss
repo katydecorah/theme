@@ -3,8 +3,8 @@
   text-align: center;
 
   svg {
-    vertical-align: sub;
     margin-right: 0.25em;
+    vertical-align: sub;
   }
 }
 
@@ -15,18 +15,13 @@
 
 // scss-lint:disable VendorPrefixes
 .playlist {
-  -moz-column-gap: 3em;
-  -webkit-column-gap: 3em;
-  column-gap: 3em;
-  -moz-columns: 2 290px;
-  -webkit-columns: 2 290px;
-  columns: 2 290px;
-
   margin-bottom: 2em;
+  columns: 2 290px;
+  column-gap: 3em;
 }
 
 .playlist-track {
-  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
   margin-bottom: 1em;
 }
 
@@ -35,7 +30,7 @@
 }
 
 .track-artist {
-  font-weight: bold;
+  font-weight: $body-font-bold;
 }
 
 .track-meta {
@@ -53,8 +48,8 @@
 
   &:nth-child(even) {
     background: var(--text-accent);
-    border-bottom: 1px dashed var(--background-accent);
     border-top: 1px dashed var(--background-accent);
+    border-bottom: 1px dashed var(--background-accent);
   }
 
   &:target {

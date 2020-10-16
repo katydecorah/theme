@@ -1,12 +1,11 @@
 .post {
   @media (max-width: $container-width) {
-    padding-left: 1em;
     padding-right: 1em;
+    padding-left: 1em;
   }
 
   h1,
   h2,
-  h3,
   h3,
   h4,
   p,
@@ -20,8 +19,8 @@
   .footnotes,
   .books,
   .note {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 
   ol,
@@ -62,25 +61,24 @@
   .media,
   table {
     @extend %clearfix;
-
-    border: 0;
+    position: relative;
     display: block;
+    max-width: $media-max;
+    margin-right: auto;
     margin-bottom: 1em;
     margin-left: auto;
-    margin-right: auto;
-    max-width: $media-max;
-    position: relative;
+    border: 0;
 
     @media (max-width: $media-max) and (min-width: $container-width) {
-      padding-left: 1em;
       padding-right: 1em;
+      padding-left: 1em;
     }
 
     picture,
     img,
     video {
-      margin-bottom: 0.5em;
       margin-top: 0;
+      margin-bottom: 0.5em;
     }
 
     picture ~ .caption,
@@ -102,34 +100,23 @@
   // scss-lint:disable PropertySortOrder, DeclarationOrder
   .photos {
     @include breakpoint(medium) {
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      -webkit-box-pack: left;
-      -webkit-justify-content: left;
-      -ms-flex-pack: left;
+      align-items: center;
       justify-content: left;
     }
   }
 
   table {
+    empty-cells: show;
     border: 1px solid var(--background-accent);
     border-collapse: collapse;
     border-spacing: 0;
-    empty-cells: show;
 
     caption {
-      color: var(--text-color);
-      font: italic 85%/1 arial, sans-serif;
       padding: 1em 0;
+      color: var(--text-color);
+      font: italic 85%/1 "arial", sans-serif;
       text-align: center;
     }
 
@@ -139,12 +126,12 @@
 
     td,
     th {
-      border-left: 1px solid var(--background-accent);
-      border-width: 0 0 0 1px;
-      font-size: inherit;
       margin: 0;
-      overflow: visible;
       padding: 0.5em 1em;
+      overflow: visible;
+      font-size: inherit;
+      border-width: 0 0 0 1px;
+      border-left: 1px solid var(--background-accent);
     }
 
     td:first-child,
@@ -153,34 +140,33 @@
     }
 
     thead {
-      background-color: var(--background-accent);
       color: var(--text-color);
       text-align: left;
       vertical-align: bottom;
+      background-color: var(--background-accent);
     }
   }
 
   .note {
     @extend %flex-container;
     @extend %flex-space-between;
-
+    margin-bottom: 1em;
+    padding: 1em 1em 0;
     background: var(--background-accent);
     border-left: 0.25em solid var(--link);
-    padding: 1em 1em 0 1em;
     border-radius: 0 $border-radius $border-radius 0;
-    margin-bottom: 1em;
 
     .svg-wrapper {
       @include breakpoint(medium) {
-        color: var(--link);
         display: block;
         margin-top: 0.25em;
+        color: var(--link);
 
         svg {
-          fill: var(--link);
-          margin-right: 1em;
           width: 1.25em;
           height: 1.25em;
+          margin-right: 1em;
+          fill: var(--link);
         }
       }
       display: none;
@@ -188,8 +174,8 @@
   }
 
   .instagram-media {
-    margin: 1em auto;
     width: 100%;
+    margin: 1em auto;
 
     @include breakpoint(medium) {
       width: 65%;
@@ -211,6 +197,11 @@
 
 .post-twitter {
   margin-bottom: 1em;
+  svg {
+    width: 20px;
+    margin-right: 0.25em;
+    vertical-align: sub;
+  }
 }
 
 .post-locations {
@@ -222,14 +213,6 @@
   }
 }
 
-.post-twitter {
-  svg {
-    margin-right: 0.25em;
-    vertical-align: sub;
-    width: 20px;
-  }
-}
-
 .post-footer-meta {
   margin-bottom: 2em;
 }
@@ -238,7 +221,8 @@
   display: inline-block;
   margin-bottom: 0.25em;
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: none;
   }
 }
@@ -250,16 +234,15 @@
 }
 
 .post-meta-header {
-  color: var(--text-accent);
-  margin-bottom: 0em;
-
   position: relative;
   z-index: 1;
+  margin-bottom: 0;
+  color: var(--text-accent);
 }
 
 svg {
-  vertical-align: top;
   width: 1em;
+  vertical-align: top;
 }
 .post-meta-breadcrumbs {
   margin-bottom: 1.5em;
@@ -274,12 +257,12 @@ svg {
 
 .post-meta-date {
   .post-meta-header-has-map & {
-    background-color: var(--background-accent);
     display: inline-block;
-    padding: 0.1em 0.5em;
-    border-radius: 0.25em;
     margin-left: -0.5em;
+    padding: 0.1em 0.5em;
     color: var(--text-color);
+    background-color: var(--background-accent);
+    border-radius: 0.25em;
   }
 }
 
@@ -290,13 +273,7 @@ svg {
 .post-prev-next {
   @extend %flex-container;
 
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
 
   margin-top: 1em;
 
@@ -308,9 +285,6 @@ svg {
   }
 
   @include breakpoint(medium) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 
@@ -331,7 +305,8 @@ svg {
     min-height: 2em;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: none;
     transition: var(--link-transition);
   }
@@ -345,6 +320,7 @@ svg {
   @include breakpoint(small) {
     margin-top: 1em;
   }
+
   @include breakpoint(medium) {
     text-align: right;
   }
@@ -379,16 +355,16 @@ caption {
 }
 
 figcaption {
-  margin-bottom: 2em;
   margin-top: -1em;
+  margin-bottom: 2em;
 }
 
 .caption {
-  margin-left: auto;
-  margin-top: -2.5em;
-  margin-right: auto;
   position: relative;
   z-index: 1;
+  margin-top: -2.5em;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .footnotes {
@@ -410,20 +386,18 @@ figcaption {
 .reversefootnote,
 .footnote {
   @extend %xs;
-
+  margin: 0 0.25em;
+  padding: 0 0.25em;
+  color: var(--text-color);
+  text-decoration: none;
   background: var(--background-accent);
   border-radius: $border-radius;
-  color: var(--text-color);
-  padding: 0 0.25em;
-  margin: 0 0.25em;
-  text-decoration: none;
 }
 
 .badge {
   @extend %xs;
-
-  background: var(--background-accent);
-  border-radius: 1em;
   padding: 0 0.5em;
   vertical-align: middle;
+  background: var(--background-accent);
+  border-radius: 1em;
 }

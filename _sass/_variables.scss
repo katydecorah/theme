@@ -9,6 +9,19 @@ $link: #9c5b74;
 $link-hover: darken($link, 10%);
 $text-accent: #6e6e6e;
 
+/////////////// Code Highlighter
+// Adapted from https://gist.github.com/edwardhotchkiss/2005058
+
+$highlightone: #586e75;
+$highlighttwo: #7f9090;
+$highlightthree: #859900;
+$highlightfour: #cb4b16;
+$highlightfive: #2aa198;
+$highlightsix: #dc322f;
+$highlightseven: #268bd2;
+$highlighteight: #b58900;
+$highlightnine: #777474;
+
 :root {
   --always-background: #{$background}; // var does not change at dark theme
   --always-dark: #{$text-color}; // var does not change at dark theme
@@ -19,6 +32,17 @@ $text-accent: #6e6e6e;
   --switch: #{$background-accent};
   --text-accent: #{$text-accent};
   --text-color: #{$text-color};
+
+  // highlighters
+  --highlightone: #{$highlightone};
+  --highlighttwo: #{$highlighttwo};
+  --highlightthree: #{$highlightthree};
+  --highlightfour: #{$highlightfour};
+  --highlightfive: #{$highlightfive};
+  --highlightsix: #{$highlightsix};
+  --highlightseven: #{$highlightseven};
+  --highlighteight: #{$highlighteight};
+  --highlightnine: #{$highlightnine};
 }
 
 @media (prefers-color-scheme: dark) {
@@ -71,47 +95,22 @@ $body-padding-top: 4em;
 
 @each $color in $list {
   .swatch#{"-" + $color} {
-    background: var(--$color);
+    position: relative;
     width: 100px;
     height: 100px;
+    background: var(--$color);
+    border: 1px solid #fff;
     border-radius: $border-radius;
-    border: 1px solid white;
-    position: relative;
 
     &:before {
-      content: "#{$color}";
       position: absolute;
       top: calc(100% + 0.5em);
+      width: 100%;
       font-size: 0.6em;
       text-align: center;
-      width: 100%;
+      content: "#{$color}";
     }
   }
-}
-
-/////////////// Code Highlighter
-// Adapted from https://gist.github.com/edwardhotchkiss/2005058
-
-$highlightone: #586e75;
-$highlighttwo: #7f9090;
-$highlightthree: #859900;
-$highlightfour: #cb4b16;
-$highlightfive: #2aa198;
-$highlightsix: #dc322f;
-$highlightseven: #268bd2;
-$highlighteight: #b58900;
-$highlightnine: #777474;
-
-:root {
-  --highlightone: #{$highlightone};
-  --highlighttwo: #{$highlighttwo};
-  --highlightthree: #{$highlightthree};
-  --highlightfour: #{$highlightfour};
-  --highlightfive: #{$highlightfive};
-  --highlightsix: #{$highlightsix};
-  --highlightseven: #{$highlightseven};
-  --highlighteight: #{$highlighteight};
-  --highlightnine: #{$highlightnine};
 }
 
 $highlighters: highlightone highlighttwo highlightthree highlightfour
@@ -119,20 +118,20 @@ $highlighters: highlightone highlighttwo highlightthree highlightfour
 
 @each $color in $highlighters {
   .swatch#{"-" + $color} {
-    background: var(--$color);
+    position: relative;
     width: 50px;
     height: 50px;
+    background: var(--$color);
+    border: 1px solid #fff;
     border-radius: $border-radius;
-    border: 1px solid white;
-    position: relative;
 
     &:before {
-      content: "#{$color}";
       position: absolute;
       top: calc(100% + 0.5em);
+      width: 100%;
       font-size: 0.5em;
       text-align: center;
-      width: 100%;
+      content: "#{$color}";
     }
   }
 }

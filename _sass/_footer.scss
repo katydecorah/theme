@@ -1,28 +1,29 @@
 .footer {
-  background: var(--background-accent);
-  margin-top: 2em;
   position: relative;
   z-index: 100;
+  margin-top: 2em;
+  background: var(--background-accent);
 
   .container {
-    padding-bottom: 2em;
     padding-top: 3em;
+    padding-bottom: 2em;
   }
 
   .nav {
     @extend %flex-center-inline;
     @extend %flex-space-between;
     @extend %flex-wrap;
+    width: 100%;
+    max-width: 300px;
 
     margin-top: 1em;
-    max-width: 300px;
-    width: 100%;
   }
 
   .nav-link {
     text-decoration: none;
 
-    &.nav-link:hover {
+    &.nav-link:hover,
+    &.nav-link:focus {
       color: var(--link-hover);
       text-decoration: none;
     }
@@ -55,8 +56,8 @@
     margin: 0;
 
     img {
-      border-radius: 100%;
       margin: 0;
+      border-radius: 100%;
     }
   }
 }
