@@ -1,11 +1,7 @@
-{% assign category = post.categories[0] %} {% assign file =
-site.data.icons[category] | append: '.svg' | prepend: 'icons/' %}
+{% assign category = post.categories[0] %}
 <a href="{{ post.url }}" class="post-link">
   <div class="post-meta">
-    <div class="post-title">
-      <div class="post-emoji">{% include {{file}} %}</div>
-      {{ post.title }}
-    </div>
+    <div class="post-title">{{ post.title }}</div>
     <div class="post-date small">
       {% if page.title == 'Katy DeCorah' %}<span class="post-post-category"
         >{{ category }}</span
