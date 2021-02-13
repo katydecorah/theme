@@ -76,29 +76,15 @@
 .all-posts {
   .home-page & {
     max-width: 600px;
-    padding-left: 1.5em;
-  }
-
-  @include breakpoint(medium) {
-    .home-page & {
-      padding-left: 2em;
+    margin-top: 1em;
+    @include breakpoint(medium) {
+      margin-top: 0;
     }
   }
 
   .post-meta {
     .no-flexbox & {
       padding-top: 2em;
-    }
-  }
-
-  .post-emoji {
-    position: absolute;
-    top: 0.25em;
-    display: inline-block;
-    text-indent: -1.5em;
-
-    @include breakpoint(medium) {
-      text-indent: -2em;
     }
   }
 
