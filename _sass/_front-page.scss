@@ -76,6 +76,10 @@
 .all-posts {
   .home-page & {
     max-width: 600px;
+    margin-top: 1em;
+    @include breakpoint(medium) {
+      margin-top: 0;
+    }
   }
 
   .post-meta {
