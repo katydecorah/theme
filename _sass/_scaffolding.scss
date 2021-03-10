@@ -70,7 +70,7 @@ img {
     width: auto; // Defer to max-width
   }
 
-  &[width][height] {
+  &[width][height]:not(.emoji) {
     width: 100%;
     height: auto; // Preserve aspect ratio
   }
