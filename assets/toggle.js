@@ -1,3 +1,5 @@
+/* Credit: https://piccalil.li/tutorial/create-a-user-controlled-dark-or-light-mode */
+
 // Remove the no JS class so that the button will show
 document.documentElement.classList.remove("no-js");
 
