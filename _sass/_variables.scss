@@ -23,6 +23,7 @@ $highlighteight: #b58900;
 $highlightnine: #777474;
 
 :root {
+  --color-mode: "light";
   --always-background: #{$background}; // var does not change at dark theme
   --always-dark: #{$text-color}; // var does not change at dark theme
   --background: #{$background};
@@ -47,6 +48,10 @@ $highlightnine: #777474;
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --color-mode: "dark";
+  }
+
+  :root:not([data-user-color-scheme]) {
     --background: #{$text-color};
     --background-accent: #{lighten($text-color, 5%)};
     --link: #{lighten($link, 25%)};
@@ -55,6 +60,25 @@ $highlightnine: #777474;
     --text-accent: #{lighten($text-accent, 20%)};
     --text-color: #dedede;
   }
+}
+
+[data-user-color-scheme="dark"] {
+  --background: #{$text-color};
+  --background-accent: #{lighten($text-color, 5%)};
+  --link: #{lighten($link, 25%)};
+  --link-hover: #{lighten($link, 10%)};
+  --switch: #{darken($text-color, 10%)};
+  --text-accent: #{lighten($text-accent, 20%)};
+  --text-color: #dedede;
+}
+
+[data-user-color-scheme="light"] .toggle-button__icon-light,
+[data-user-color-scheme="dark"] .toggle-button__icon-dark {
+  display: block;
+}
+[data-user-color-scheme="light"] .toggle-button__icon-dark,
+[data-user-color-scheme="dark"] .toggle-button__icon-light {
+  display: none;
 }
 
 $body-font-size: 24px;

@@ -44,3 +44,26 @@
     color: var(--text-accent);
   }
 }
+
+.btn--toggle {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  margin-bottom: 0;
+  padding: 0 0.25em;
+  border: 0;
+  cursor: pointer;
+
+  .home-page & {
+    top: 0.5em;
+    margin-right: 0;
+
+    @include breakpoint(medium) {
+      top: 0;
+    }
+  }
+
+  @include breakpoint(medium) {
+    right: 0;
+  }
+}
