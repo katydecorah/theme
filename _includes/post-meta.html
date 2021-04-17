@@ -5,8 +5,8 @@
     <div class="container">
       <div class="breadcrumbs{% if layout.hideHeader %} show-small{% endif %}">
         <a class="post-meta-link" href="{{site.url}}">Katy DeCorah</a>
-        {% if page.title != 'Katy DeCorah' %} {% if page.categories[0] %} {%
-        include icons/chevron-right.svg %}
+        {% if page.title != 'Katy DeCorah' %} {% include icons/chevron-right.svg
+        %} {% if page.categories[0] %}
         <a class="post-meta-link" href="/{{ page.categories[0] | downcase}}"
           >{{ page.categories[0] }}</a
         >
