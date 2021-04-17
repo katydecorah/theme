@@ -3,7 +3,7 @@
 >
   <div class="post-meta-breadcrumbs">
     <div class="container">
-      {% if !page.hideHeader %}
+      {% unless page.hideHeader %}
       <div class="breadcrumbs">
         <a class="post-meta-link" href="{{site.url}}">Katy DeCorah</a>
         {% include icons/chevron-right.svg %} {% if page.categories[0] %}
@@ -14,7 +14,7 @@
         <span class="post-meta-link">{{ page.title }}</span>
         {% endif %}
       </div>
-      {% endif %} {% include theme-toggle.html %}
+      {% endunless %} {% include theme-toggle.html %}
     </div>
   </div>
   {% if page.categories[0] %}
