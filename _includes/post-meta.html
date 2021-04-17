@@ -10,6 +10,8 @@
         <a class="post-meta-link" href="/{{ page.categories[0] | downcase}}"
           >{{ page.categories[0] | downcase}}</a
         >
+        {% elsif page.titleDowncase %}
+        <span class="post-meta-link">{{ page.title | downcase }}</span>
         {% else %}
         <span class="post-meta-link">{{ page.title }}</span>
         {% endif %} {% endif %}
