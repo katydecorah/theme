@@ -54,6 +54,11 @@
   border: 0;
   cursor: pointer;
 
+  &:hover svg,
+  &:focus svg {
+    color: var(--link);
+  }
+
   @include breakpoint(medium) {
     right: 0;
   }
