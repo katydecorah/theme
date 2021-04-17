@@ -262,8 +262,9 @@ svg {
   margin-bottom: 1.5em;
   padding-bottom: 0.5em;
 
-  @include breakpoint(medium) {
-    .home-page & {
+  .home-page & {
+    margin-bottom: 0.5em;
+    @include breakpoint(medium) {
       margin-bottom: 0;
       padding-bottom: 0;
       background: transparent;
