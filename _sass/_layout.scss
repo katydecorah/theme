@@ -30,11 +30,12 @@
 
 .columns {
   columns: 2 10em;
-  column-gap: 3em;
+  column-gap: 1em;
 
   @include breakpoint(medium) {
     font-size: $font-xs;
     columns: 3 10em;
+    column-gap: 3em;
   }
 
   .icon-ul {
