@@ -256,14 +256,14 @@ svg {
   vertical-align: top;
 }
 .post-meta-breadcrumbs {
-  padding-top: 0.5em;
-
-  background-color: var(--background-accent);
   margin-bottom: 1.5em;
+  padding-top: 0.5em;
   padding-bottom: 0.5em;
+  background-color: var(--background-accent);
 
   .home-page & {
     margin-bottom: 0.5em;
+
     @include breakpoint(medium) {
       margin-bottom: 0;
       padding-bottom: 0;
