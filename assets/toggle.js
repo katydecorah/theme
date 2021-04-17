@@ -36,10 +36,6 @@ const applySetting = (passedSetting) => {
   let currentSetting = passedSetting || localStorage.getItem(STORAGE_KEY);
 
   if (currentSetting) {
-    document.documentElement.setAttribute(
-      "data-user-color-scheme",
-      currentSetting
-    );
     setButtonLabelAndStatus(currentSetting);
   } else {
     setButtonLabelAndStatus(getCSSCustomProp(COLOR_MODE_KEY));
@@ -74,6 +70,10 @@ const toggleSetting = () => {
  * A shared method for setting the button text label and visually hidden status element
  */
 const setButtonLabelAndStatus = (currentSetting) => {
+  document.documentElement.setAttribute(
+    "data-user-color-scheme",
+    currentSetting
+  );
   modeToggleButton.setAttribute(
     "aria-label",
     `Enable ${currentSetting === "dark" ? "light" : "dark"} mode`
