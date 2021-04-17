@@ -259,7 +259,7 @@ svg {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 
-  :not(.home-page) & {
+  body:not(.home-page) & {
     background-color: var(--background-accent);
     margin-bottom: 1.5em;
   }
