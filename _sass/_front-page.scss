@@ -12,7 +12,7 @@
 
     .content {
       order: 2;
-      margin: 1em 1em 0 2em;
+      margin: 0 1em 0 2em;
     }
 
     .footer {
@@ -53,13 +53,13 @@
     background: linear-gradient(
       90deg,
       var(--background-accent) 0%,
-      var(--background-accent) 45%,
-      var(--background) 45%,
+      var(--background-accent) 47%,
+      var(--background) 47%,
       var(--background) 100%
     );
   }
 
-  .btn {
+  .content .btn {
     margin-right: 0.5em;
   }
 
@@ -68,7 +68,7 @@
   }
 
   @include breakpoint(medium) {
-    .container {
+    .wrapper .container {
       padding: 0;
     }
 
@@ -81,11 +81,6 @@
 .all-posts {
   .home-page & {
     max-width: 600px;
-    margin-top: 1em;
-
-    @include breakpoint(medium) {
-      margin-top: 0;
-    }
   }
 
   .post-meta {

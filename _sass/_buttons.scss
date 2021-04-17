@@ -54,13 +54,9 @@
   border: 0;
   cursor: pointer;
 
-  .home-page & {
-    top: 0.5em;
-    margin-right: 0;
-
-    @include breakpoint(medium) {
-      top: 0;
-    }
+  &:hover svg,
+  &:focus svg {
+    color: var(--link);
   }
 
   @include breakpoint(medium) {

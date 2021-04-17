@@ -24,6 +24,12 @@
   }
 }
 
+.show-small {
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+
 %flex {
   display: flex;
   align-items: center;

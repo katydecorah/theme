@@ -10,10 +10,9 @@ layout: compress
   <body
     class="{{layout.layout | slugify}}-page {{page.layout | slugify}}-page page-{{ page.title | slugify }}"
   >
+    <a class="skip" href="#content">Skip to content</a>
+    {%- include post-meta.html -%}
     <div class="wrapper">
-      <a class="skip" href="#content">Skip to content</a>
-      {%- unless layout.hideHeader -%}{%- include post-meta.html -%}{%-
-      endunless -%}
       <main
         aria-label="Content"
         id="content"

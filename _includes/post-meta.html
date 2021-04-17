@@ -3,15 +3,16 @@
 >
   <div class="post-meta-breadcrumbs">
     <div class="container">
-      <div class="breadcrumbs">
+      <div class="breadcrumbs{% if layout.hideHeader %} show-small{% endif %}">
         <a class="post-meta-link" href="{{site.url}}">Katy DeCorah</a>
-        {% include icons/chevron-right.svg %} {% if page.categories[0] %}
+        {% if page.title != 'Katy DeCorah' %} {% include icons/chevron-right.svg
+        %} {% if page.categories[0] %}
         <a class="post-meta-link" href="/{{ page.categories[0] | downcase}}"
           >{{ page.categories[0] }}</a
         >
         {% else %}
         <span class="post-meta-link">{{ page.title }}</span>
-        {% endif %}
+        {% endif %} {% endif %}
       </div>
       {% include theme-toggle.html %}
     </div>
