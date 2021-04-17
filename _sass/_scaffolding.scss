@@ -9,7 +9,7 @@ body {
 }
 
 html {
-  background-color: var(--background);
+  background: var(--background-accent);
 }
 
 body {
@@ -19,6 +19,8 @@ body {
   font-size: $body-font-size;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
+
+  background-color: var(--background);
 }
 
 a {
