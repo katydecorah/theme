@@ -8,7 +8,7 @@
         {% if page.title != 'Katy DeCorah' %} {% include icons/chevron-right.svg
         %} {% if page.categories[0] %}
         <a class="post-meta-link" href="/{{ page.categories[0] | downcase}}"
-          >{{ page.categories[0] }}</a
+          >{{ page.categories[0] | downcase}}</a
         >
         {% else %}
         <span class="post-meta-link">{{ page.title }}</span>
