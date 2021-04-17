@@ -42,6 +42,7 @@ const applySetting = (passedSetting) => {
     );
     setButtonLabelAndStatus(currentSetting);
   } else {
+    console.log(getCSSCustomProp(COLOR_MODE_KEY));
     setButtonLabelAndStatus(getCSSCustomProp(COLOR_MODE_KEY));
   }
 };
