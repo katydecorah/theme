@@ -34,7 +34,6 @@
 
   @include breakpoint(medium) {
     font-size: $font-xs;
-    columns: 3 10em;
     column-gap: 3em;
   }
 
