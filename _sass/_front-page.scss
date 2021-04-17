@@ -59,7 +59,7 @@
     );
   }
 
-  .btn {
+  .content .btn {
     margin-right: 0.5em;
   }
 
@@ -68,7 +68,7 @@
   }
 
   @include breakpoint(medium) {
-    .container {
+    .wrapper .container {
       padding: 0;
     }
 
