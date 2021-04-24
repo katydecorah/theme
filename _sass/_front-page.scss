@@ -154,18 +154,8 @@
 }
 
 .post-tags {
-  display: none;
-
   .post-page & {
     margin-top: 0.25em;
-  }
-
-  @include breakpoint(medium) {
-    display: block;
-    .home-page & {
-      display: inline-block;
-      margin-left: 0.5em;
-    }
   }
 
   .post-tag {
