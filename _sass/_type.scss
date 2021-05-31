@@ -126,6 +126,13 @@ ol {
   list-style: decimal;
 }
 
+ol ul,
+ul ul,
+ul ol,
+ol ol {
+  margin-bottom: unset;
+}
+
 .unstyled {
   margin: 0;
   padding: 0;
