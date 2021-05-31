@@ -22,7 +22,18 @@ body {
   background-color: var(--background);
 }
 
-a {
+.link-header {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: var(--link-hover);
+    transition: var(--link-transition);
+  }
+}
+
+a:not(.link-header) {
   color: var(--link);
   transition: var(--link-transition);
 
