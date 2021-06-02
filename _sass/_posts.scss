@@ -97,6 +97,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
     picture,
+    caption,
     video,
     iframe {
       grid-column: span 12;
@@ -108,9 +109,13 @@
       }
     }
 
+    // stylelint-disable selector-max-specificity
     > .img-half:nth-child(1):last-child {
-      grid-column: 4 / span 6;
+      @include breakpoint(medium) {
+        grid-column: 4 / span 6;
+      }
     }
+    // stylelint-enable selector-max-specificity
 
     .img-thirds {
       @include breakpoint(medium) {
