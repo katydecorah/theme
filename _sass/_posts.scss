@@ -106,6 +106,10 @@
       }
     }
 
+    > .img-half:nth-child(1):last-child {
+      grid-column: 4 / span 6;
+    }
+
     .img-thirds {
       @include breakpoint(medium) {
         grid-column: span 4;
