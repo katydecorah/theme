@@ -30,7 +30,7 @@ em {
 
 p {
   margin-top: 0;
-  margin-bottom: 1.3em;
+  margin-bottom: 1em;
 }
 
 h1,
@@ -124,6 +124,13 @@ ol {
 
 ol {
   list-style: decimal;
+}
+
+ol ul,
+ul ul,
+ul ol,
+ol ol {
+  margin-bottom: unset;
 }
 
 .unstyled {

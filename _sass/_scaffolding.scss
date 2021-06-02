@@ -22,7 +22,18 @@ body {
   background-color: var(--background);
 }
 
-a {
+.link-header {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--link-hover);
+    transition: var(--link-transition);
+  }
+}
+
+a:not(.link-header) {
   color: var(--link);
   transition: var(--link-transition);
 
@@ -60,7 +71,6 @@ video {
 
 picture {
   display: block;
-  margin: 2em auto;
 }
 
 // https://www.zachleat.com/web/fluid-images/
@@ -90,56 +100,11 @@ img {
   margin-left: auto;
 }
 
-.img-half {
-  .post & {
-    max-width: 500px;
-  }
-
-  @include breakpoint(medium) {
-    width: 49.6%;
-  }
-}
-
-.img-thirds {
-  @include breakpoint(medium) {
-    width: 32.89%;
-  }
-}
-
-.thirds {
-  float: left;
-  margin-bottom: 1em;
-
-  @include breakpoint(medium) {
-    width: 31.8%;
-  }
-}
-
-.img-fourths {
-  @include breakpoint(medium) {
-    width: 24.5%;
-  }
-}
-
 .post {
   video + video {
     @include breakpoint(medium) {
       margin-left: 0.65%;
     }
-  }
-}
-
-.img-split-wide,
-.img-wide {
-  @include breakpoint(medium) {
-    width: 62.7%;
-  }
-}
-
-.img-split-tall,
-.img-tall {
-  @include breakpoint(medium) {
-    width: 35.25%;
   }
 }
 

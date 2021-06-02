@@ -4,7 +4,18 @@ hideTitle: true
 ---
 
 <div
-  class="post-header{% if page.locations %} post-header-has-map{% else %} post-header-no-map{% endif %}"
+  class="
+    post-header{%
+    if
+    page.locations
+    %}
+    post-header-has-map{%
+    else
+    %}
+    post-header-no-map{%
+    endif
+    %}
+  "
 >
   {% include post-map-header.html %}
   <div class="container"><h1>{{ page.title }}</h1></div>
@@ -23,3 +34,7 @@ hideTitle: true
     {% include prev-next.html %}
   </div>
 </div>
+<script>
+  for (let h of document.querySelectorAll("h2[id],h3[id],h4[id]"))
+    h.innerHTML = ` <a class="link-header" href="#${h.id}">${h.innerHTML}</a>`;
+</script>

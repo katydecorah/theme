@@ -28,14 +28,6 @@
     max-width: $container-width - ($body-font-size * 2);
   }
 
-  li {
-    margin-bottom: 0.7em;
-
-    ul {
-      margin-top: 0.7em;
-    }
-  }
-
   p,
   pre,
   .playlist,
@@ -60,7 +52,6 @@
   iframe,
   .media,
   table {
-    @extend %clearfix;
     position: relative;
     display: block;
     max-width: $media-max;
@@ -74,11 +65,14 @@
       padding-left: 1em;
     }
 
-    picture,
     img,
     video {
       margin-top: 0;
       margin-bottom: 0.5em;
+    }
+
+    picture img {
+      margin-bottom: 0;
     }
 
     picture ~ .caption,
@@ -97,13 +91,67 @@
     }
   }
 
-  // scss-lint:disable PropertySortOrder, DeclarationOrder
+  // images without .photos wrapper
+  picture:not(.photos picture) {
+    max-width: $container-width;
+    margin: 0 auto;
+  }
+
+  .img-half:not(.photos .img-half) {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
   .photos {
-    @include breakpoint(medium) {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: left;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    picture,
+    caption,
+    video,
+    iframe {
+      grid-column: span 12;
+    }
+
+    .img-half {
+      @include breakpoint(medium) {
+        grid-column: span 6;
+      }
+    }
+
+    // stylelint-disable selector-max-specificity
+    > .img-half:nth-child(1):last-child {
+      @include breakpoint(medium) {
+        grid-column: 4 / span 6;
+      }
+    }
+    // stylelint-enable selector-max-specificity
+
+    .img-thirds {
+      @include breakpoint(medium) {
+        grid-column: span 4;
+      }
+    }
+
+    .img-fourths {
+      @include breakpoint(medium) {
+        grid-column: span 3;
+      }
+    }
+
+    .img-split-wide,
+    .img-wide {
+      @include breakpoint(medium) {
+        grid-column: span 7;
+      }
+    }
+
+    .img-split-tall,
+    .img-tall {
+      @include breakpoint(medium) {
+        grid-column: span 5;
+      }
     }
   }
 
@@ -191,10 +239,6 @@
   }
 }
 
-.post-footer {
-  margin-top: 2em;
-}
-
 .post-twitter {
   margin-bottom: 1em;
   svg {
@@ -211,10 +255,6 @@
     color: var(--text-accent);
     vertical-align: text-bottom;
   }
-}
-
-.post-footer-meta {
-  margin-bottom: 2em;
 }
 
 .tag {
