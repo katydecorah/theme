@@ -94,6 +94,7 @@
   // images without .photos wrapper
   picture:not(.photos picture) {
     max-width: $container-width;
+    margin: 0 auto;
   }
   picture.img-half:not(.photos .img-half) {
     max-width: 500px;
