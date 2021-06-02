@@ -100,47 +100,11 @@ img {
   margin-left: auto;
 }
 
-.img-half {
-  .post & {
-    max-width: 500px;
-  }
-
-  @include breakpoint(medium) {
-    grid-column: span 6;
-  }
-}
-
-.img-thirds {
-  @include breakpoint(medium) {
-    grid-column: span 4;
-  }
-}
-
-.img-fourths {
-  @include breakpoint(medium) {
-    grid-column: span 3;
-  }
-}
-
 .post {
   video + video {
     @include breakpoint(medium) {
       margin-left: 0.65%;
     }
-  }
-}
-
-.img-split-wide,
-.img-wide {
-  @include breakpoint(medium) {
-    grid-column: span 7;
-  }
-}
-
-.img-split-tall,
-.img-tall {
-  @include breakpoint(medium) {
-    grid-column: span 5;
   }
 }
 

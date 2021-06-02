@@ -65,7 +65,6 @@
       padding-left: 1em;
     }
 
-    picture,
     img,
     video {
       margin-top: 0;
@@ -96,6 +95,42 @@
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    picture {
+      grid-column: span 12;
+    }
+
+    .img-half {
+      @include breakpoint(medium) {
+        grid-column: span 6;
+      }
+    }
+
+    .img-thirds {
+      @include breakpoint(medium) {
+        grid-column: span 4;
+      }
+    }
+
+    .img-fourths {
+      @include breakpoint(medium) {
+        grid-column: span 3;
+      }
+    }
+
+    .img-split-wide,
+    .img-wide {
+      @include breakpoint(medium) {
+        grid-column: span 7;
+      }
+    }
+
+    .img-split-tall,
+    .img-tall {
+      @include breakpoint(medium) {
+        grid-column: span 5;
+      }
+    }
   }
 
   table {
