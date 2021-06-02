@@ -96,7 +96,8 @@
     max-width: $container-width;
     margin: 0 auto;
   }
-  picture.img-half:not(.photos .img-half) {
+
+  .img-half:not(.photos .img-half) {
     max-width: 500px;
     margin: 0 auto;
   }
