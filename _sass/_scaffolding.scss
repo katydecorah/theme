@@ -106,28 +106,19 @@ img {
   }
 
   @include breakpoint(medium) {
-    width: 49.6%;
+    grid-column: span 6;
   }
 }
 
 .img-thirds {
   @include breakpoint(medium) {
-    width: 32.89%;
-  }
-}
-
-.thirds {
-  float: left;
-  margin-bottom: 1em;
-
-  @include breakpoint(medium) {
-    width: 31.8%;
+    grid-column: span 4;
   }
 }
 
 .img-fourths {
   @include breakpoint(medium) {
-    width: 24.5%;
+    grid-column: span 3;
   }
 }
 
@@ -142,14 +133,14 @@ img {
 .img-split-wide,
 .img-wide {
   @include breakpoint(medium) {
-    width: 62.7%;
+    grid-column: span 7;
   }
 }
 
 .img-split-tall,
 .img-tall {
   @include breakpoint(medium) {
-    width: 35.25%;
+    grid-column: span 5;
   }
 }
 

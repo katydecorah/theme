@@ -52,7 +52,6 @@
   iframe,
   .media,
   table {
-    @extend %clearfix;
     position: relative;
     display: block;
     max-width: $media-max;
@@ -93,14 +92,10 @@
     }
   }
 
-  // scss-lint:disable PropertySortOrder, DeclarationOrder
   .photos {
-    @include breakpoint(medium) {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: left;
-    }
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 
   table {
