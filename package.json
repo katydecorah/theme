@@ -6,7 +6,8 @@
   "scripts": {
     "pretty-quick": "pretty-quick",
     "lint": "stylelint \"_sass/**/*.scss\" --fix && eslint .",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
   "devDependencies": {
     "eslint": "^7.27.0",
     "feather-icons": "^4.28.0",
-    "husky": "^4.3.8",
+    "husky": "^7.0.0",
     "prettier": "^2.1.2",
     "pretty-quick": "^3.1.0",
     "stylelint": "^13.7.2",
@@ -32,11 +33,6 @@
     "stylelint-no-unsupported-browser-features": "^5.0.1",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
   },
   "bin": {
     "update-icons": "bin/icons.js"
