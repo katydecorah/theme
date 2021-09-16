@@ -1,0 +1,56 @@
+<p>
+  The <a href="#books">books</a>, <a href="#playlist">music</a>, and
+  <a href="#recipes">recipes</a> I enjoyed this season.
+</p>
+
+<h2 id="books">Books</h2>
+<div class="playlist">
+  {% for book in page.books %}
+  <div class="playlist-track">
+    <div class="track-name"><a href="{{book.link}}">{{ book.title }}</a></div>
+    <div class="track-meta">
+      <span class="track-artist">{{ book.authors }} </span>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<h2 id="playlist">Playlist</h2>
+
+{% capture src %}{{page.playlist | slugify}}.png{% endcapture %} {% include
+img.html src=src class='img-half' alt='album art' width='1000' height='1000' %}
+{% if page.spotify %}
+<p class="playlist-meta">
+  <a href="{{ page.spotify }}" class="btn"
+    >{% include icons/headphones.svg %} Listen on Spotify</a
+  >
+</p>
+{% endif %}
+<div class="playlist">
+  {% for tracks in page.tracks %}
+  <div class="playlist-track">
+    <div class="track-name">{{ tracks.track }}</div>
+    <div class="track-meta">
+      <span class="track-artist">{{ tracks.artist }} </span>
+      {% if tracks.album and tracks.album != '' %}<span class="track-album">
+        - {{ tracks.album }}</span
+      >{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<h2 id="recipes">Recipes</h2>
+<div class="playlist">
+  {% for recipe in page.recipes %}
+  <div class="playlist-track">
+    <div class="track-name">
+      <a href="{{recipe.link}}">{{ recipe.title }}</a>
+    </div>
+    <div class="track-meta">
+      <span class="track-artist">{{ recipe.site }} </span>
+    </div>
+  </div>
+  {% endfor %}
+</div>
