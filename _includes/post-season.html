@@ -7,7 +7,7 @@
 <div class="playlist">
   {% for book in page.books %}
   <div class="playlist-track">
-    <div class="track-name"><a href="{{book.link}}">{{ book.title }}</a></div>
+    <div class="track-name"><a href="{{book.url}}">{{ book.title }}</a></div>
     <div class="track-meta">
       <span class="track-artist">{{ book.authors }} </span>
     </div>
@@ -45,7 +45,7 @@ img.html src=src class='img-half' alt='album art' width='1000' height='1000' %}
   {% for recipe in page.recipes %}
   <div class="playlist-track">
     <div class="track-name">
-      <a href="{{recipe.link}}">{{ recipe.title }}</a>
+      <a href="{{recipe.url}}">{{ recipe.title }}</a>
     </div>
     <div class="track-meta">
       <span class="track-artist">{{ recipe.site }} </span>
