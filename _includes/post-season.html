@@ -1,8 +1,16 @@
+{% assign media = "" | split: ',' %} {% if page.books %}{% assign media = media
+| push: 'books' %}{% endif %} {% if page.tracks %}{% assign media = media |
+push: 'playlist' %}{% endif %} {% if page.recipes %}{% assign media = media |
+push: 'recipes' %}{% endif %}
+
 <p>
-  The <a href="#books">books</a>, <a href="#playlist">music</a>, and
-  <a href="#recipes">recipes</a> I enjoyed this season.
+  The {% for item in media %}<a href="#{{item}}">{{item}}</a>{% if
+  forloop.rindex == 2 %}{% if forloop.length == 3%},{%endif %} and {% elsif
+  forloop.length != forloop.index %}, {%endif%}{% endfor %} I enjoyed this
+  season.
 </p>
 
+{% if page.books %}
 <h2 id="books">Books</h2>
 <div class="playlist">
   {% for book in page.books %}
@@ -14,9 +22,8 @@
   </div>
   {% endfor %}
 </div>
-
+{% endif %} {% if page.tracks %}
 <h2 id="playlist">Playlist</h2>
-
 {% capture src %}{{page.playlist | slugify}}.png{% endcapture %} {% include
 img.html src=src class='img-half' alt='album art' width='1000' height='1000' %}
 {% if page.spotify %}
@@ -39,7 +46,7 @@ img.html src=src class='img-half' alt='album art' width='1000' height='1000' %}
   </div>
   {% endfor %}
 </div>
-
+{% endif %} {% if page.recipes %}
 <h2 id="recipes">Recipes</h2>
 <div class="playlist">
   {% for recipe in page.recipes %}
@@ -53,3 +60,4 @@ img.html src=src class='img-half' alt='album art' width='1000' height='1000' %}
   </div>
   {% endfor %}
 </div>
+{% endif %}
