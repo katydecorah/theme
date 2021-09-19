@@ -18,7 +18,7 @@
   table,
   .footnotes,
   .books,
-  .book-grid,
+  .books-grid,
   .note {
     margin-right: auto;
     margin-left: auto;
@@ -41,7 +41,7 @@
   blockquote,
   .note,
   .books,
-  .book-grid,
+  .books-grid,
   .footnotes {
     max-width: $container-width - ($body-font-size * 2);
   }
