@@ -56,3 +56,19 @@
     transition: 0.5s;
   }
 }
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+
+  .book {
+    display: flex;
+  }
+
+  img {
+    height: 100px;
+    width: auto;
+    margin-right: 0.5em;
+  }
+}
