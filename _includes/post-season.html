@@ -12,14 +12,13 @@ push: 'recipes' %}{% endif %}
 
 {% if page.books %}
 <h2 id="books">Books</h2>
-<div class="playlist">
+<div class="books">
   {% for book in page.books %}
-  <div class="playlist-track">
-    <div class="track-name"><a href="{{book.url}}">{{ book.title }}</a></div>
-    <div class="track-meta">
-      <span class="track-artist">{{ book.authors }} </span>
-    </div>
-  </div>
+  <a class="book" href="{{book.url}}"
+    ><img
+      src="https://katydecorah.com/has/img/book-{{book.isbn}}.png"
+      alt="{{book.title}} by {{book.author}}"
+  /></a>
   {% endfor %}
 </div>
 {% endif %} {% if page.tracks %}
