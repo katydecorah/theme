@@ -41,6 +41,13 @@
     @extend %flex-child;
   }
 
+  .bio-img {
+    height: 200px;
+    width: 200px;
+    background: var(--background);
+    border-radius: 100%;
+  }
+
   .bio-img.bio-img {
     @extend %flex-child-no-shrink;
 
