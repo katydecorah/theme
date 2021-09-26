@@ -16,7 +16,7 @@ push: 'recipes' %}{% endif %}
   {% for book in page.books %}
   <a class="book" href="{{book.url}}"
     ><img
-      src="https://katydecorah.com/has/img/book-{{book.isbn}}.png"
+      src="{{site.assets}}book-{{book.isbn}}.png"
       alt="{{book.title}} by {{book.authors}}"
   /></a>
   {% endfor %}
