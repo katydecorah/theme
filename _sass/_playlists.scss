@@ -24,14 +24,17 @@
   margin-bottom: 1em;
 }
 
+.book-name,
 .track-name {
   @extend %fancy-type;
 }
 
+.book-author,
 .track-artist {
   font-weight: $body-font-bold;
 }
 
+.book-meta,
 .track-meta {
   color: var(--text-accent);
   font-size: $font-xs;
