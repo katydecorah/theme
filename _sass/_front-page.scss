@@ -215,6 +215,10 @@
 }
 
 .other-collections {
-  font-size: $font-small;
+  font-size: $font-xs;
   color: var(--text-accent);
+
+  .btn {
+    margin-bottom: 0;
+  }
 }
