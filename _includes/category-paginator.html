@@ -8,7 +8,7 @@
   {% include categories.html %}
   <div class="prev-next-categories">
     {% for item in site.data.has %} {% assign name = item[0] %} {% assign file =
-    item[0] | append: '.svg' | prepend: 'icons/' %}
+    item[1] | append: '.svg' | prepend: 'icons/' %}
     <a
       aria-label="{{ name }}"
       title="{{name}}"
