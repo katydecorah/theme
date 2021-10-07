@@ -217,8 +217,11 @@
 .other-collections {
   font-size: $font-xs;
   color: var(--text-accent);
+  display: inline-flex;
+  align-items: center;
 
   .btn {
     margin-bottom: 0;
+    background: none;
   }
 }
