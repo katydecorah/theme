@@ -7,16 +7,15 @@
   </div>
   {% include categories.html %}
   <div class="prev-next-categories">
-    {% assign categories = site.data.has | sort %} {% for item in categories
-    %}{% assign name = item[0] %}
+    {% for item in site.data.has %} {% assign name = item[0] %} {% assign file =
+    item[0] | append: '.svg' | prepend: 'icons/' %}
     <a
       aria-label="{{ name }}"
       title="{{name}}"
       href="/has/{{name}}/"
       class="btn category"
     >
-      {% assign file = site.data.has[name] | append: '.svg' | prepend: 'icons/'
-      %} {% include {{file}} %} </a
+      {% include {{file}} %} </a
     >{% endfor %}
   </div>
 </div>
