@@ -71,10 +71,6 @@
     .wrapper .container {
       padding: 0;
     }
-
-    .post-prev-next {
-      margin-bottom: 1em;
-    }
   }
 }
 
@@ -216,4 +212,9 @@
       }
     }
   }
+}
+
+.other-collections {
+  font-size: $font-small;
+  color: var(--text-accent);
 }
