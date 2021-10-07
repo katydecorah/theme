@@ -6,4 +6,17 @@
     >
   </div>
   {% include categories.html %}
+  <div class="prev-next-categories">
+    {% assign categories = site.data.has | sort %} {% for item in categories
+    %}{% assign name = item[0] %}
+    <a
+      aria-label="{{ name }}"
+      title="{{name}}"
+      href="/has/{{name}}/"
+      class="btn category"
+    >
+      {% assign file = site.data.icons[name] | append: '.svg' | prepend:
+      'icons/' %} {% include {{file}} %} </a
+    >{% endunless %}{% endfor %}
+  </div>
 </div>
