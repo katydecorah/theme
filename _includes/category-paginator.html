@@ -15,8 +15,8 @@
       href="/has/{{name}}/"
       class="btn category"
     >
-      {% assign file = site.data.icons[name] | append: '.svg' | prepend:
-      'icons/' %} {% include {{file}} %} </a
-    >{% endunless %}{% endfor %}
+      {% assign file = site.data.has[name] | append: '.svg' | prepend: 'icons/'
+      %} {% include {{file}} %} </a
+    >{% endfor %}
   </div>
 </div>
