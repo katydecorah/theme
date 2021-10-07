@@ -467,12 +467,28 @@ figcaption {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+
+  .book {
+    display: block;
+    img {
+      height: 150px;
+      margin: 0;
+    }
+  }
 }
 
-.book {
-  display: block;
-  img {
-    height: 150px;
-    margin: 0;
+.book-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+
+  .book {
+    display: flex;
+  }
+
+  .book-img {
+    flex-shrink: 0;
+    width: 75px;
+    margin-right: 1em;
   }
 }
