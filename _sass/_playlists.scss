@@ -27,6 +27,7 @@
 .book-name,
 .track-name {
   @extend %fancy-type;
+  line-height: 1.3;
 }
 
 .book-authors,
