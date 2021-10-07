@@ -9,4 +9,16 @@ hideHeader: true
   {% if page.title == 'Katy DeCorah' %}{% include paginator.html %}{% endif %}
   {% if page.layout == 'category' %}{% include category-paginator.html %}{%
   endif %}
+  <div class="prev-next-categories">
+    {% for item in site.data.has %} {% assign name = item[0] %} {% assign file =
+    item[1] | append: '.svg' | prepend: 'icons/' %}
+    <a
+      aria-label="{{ name }}"
+      title="{{name}}"
+      href="/has/{{name}}/"
+      class="btn category"
+    >
+      {% include {{file}} %} </a
+    >{% endfor %}
+  </div>
 </div>
