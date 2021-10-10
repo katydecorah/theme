@@ -476,19 +476,3 @@ figcaption {
     }
   }
 }
-
-.book-list {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-
-  .book {
-    display: flex;
-  }
-
-  .book-img {
-    flex-shrink: 0;
-    width: 75px;
-    margin-right: 1em;
-  }
-}
