@@ -173,8 +173,7 @@
   }
 }
 
-.nav-link,
-.btn.category {
+.nav-link {
   @extend %flex-child-no-shrink;
   @extend %flex-center-inline;
 
@@ -216,8 +215,4 @@
       }
     }
   }
-}
-
-.prev-next-categories {
-  margin-bottom: 1em;
 }

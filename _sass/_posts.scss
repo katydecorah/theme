@@ -14,7 +14,6 @@
   figcaption,
   pre,
   blockquote,
-  .playlist,
   table,
   .footnotes,
   .books,
@@ -30,7 +29,6 @@
 
   p,
   pre,
-  .playlist,
   figcaption,
   .caption,
   h1,
@@ -39,7 +37,6 @@
   h4,
   blockquote,
   .note,
-  .books,
   .footnotes {
     max-width: $container-width - ($body-font-size * 2);
   }
@@ -50,6 +47,7 @@
   embed,
   .gist,
   iframe,
+  .playlist,
   .media,
   table {
     position: relative;
@@ -341,8 +339,6 @@ svg {
   .prev-next-btns {
     @extend %flex-container;
     @extend %flex-wrap;
-
-    margin-bottom: 1em;
   }
 
   @include breakpoint(medium) {
@@ -464,6 +460,13 @@ figcaption {
 }
 
 .books {
+  max-width: $media-max;
+
+  @media (max-width: $media-max) and (min-width: $container-width) {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
