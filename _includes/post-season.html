@@ -47,16 +47,11 @@ img.html src=src class='img-half' alt='album art' width='1000' height='1000' %}
 </div>
 {% endif %} {% if page.recipes %}
 <h2 id="recipes">Recipes</h2>
-<div class="playlist">
+<ul>
   {% for recipe in page.recipes %}
-  <div class="playlist-track">
-    <div class="track-name">
-      <a href="{{recipe.url}}">{{ recipe.title }}</a>
-    </div>
-    <div class="track-meta">
-      <span class="track-artist">{{ recipe.site }} </span>
-    </div>
-  </div>
+  <li>
+    <a href="{{recipe.url}}">{{ recipe.title }}</a> from {{ recipe.site }}
+  </li>
   {% endfor %}
-</div>
+</ul>
 {% endif %}
