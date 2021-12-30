@@ -15,7 +15,7 @@
 // scss-lint:disable VendorPrefixes
 .playlist {
   margin-bottom: 2em;
-  columns: 2 290px;
+  columns: 3 290px;
   column-gap: 3em;
 }
 
@@ -26,7 +26,6 @@
 
 .book-name,
 .track-name {
-  @extend %fancy-type;
   line-height: 1.3;
 }
 
