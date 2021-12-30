@@ -12,7 +12,7 @@
 
     .content {
       order: 2;
-      margin: 0 1em 0 2em;
+      margin: 0 1em 0 3em;
     }
 
     .footer {
@@ -173,8 +173,7 @@
   }
 }
 
-.nav-link,
-.btn.category {
+.nav-link {
   @extend %flex-child-no-shrink;
   @extend %flex-center-inline;
 
