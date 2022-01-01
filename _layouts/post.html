@@ -4,18 +4,7 @@ hideTitle: true
 ---
 
 <div
-  class="
-    post-header{%
-    if
-    page.locations
-    %}
-    post-header-has-map{%
-    else
-    %}
-    post-header-no-map{%
-    endif
-    %}
-  "
+  class="post-header{% if page.locations %} post-header-has-map{% else %} post-header-no-map{% endif %}"
 >
   {% include post-map-header.html %}
   <div class="container">
@@ -24,9 +13,10 @@ hideTitle: true
 </div>
 <div class="post" id="content">
   {% if page.type == 'season' %}{% include post-season.html %}{% else %}{{
-  content }}{% endif %} {% include post-recipe.html %}
+  content }}{% endif %} {% include post-recipe.html %} {% if
+  site.data.organizations %}
   <hr />
-  {% include support.html org=page.give %}
+  {% include support.html org=page.give %}{% endif %}
 </div>
 <div class="container">
   <div class="post-footer">
