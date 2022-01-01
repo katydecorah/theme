@@ -485,6 +485,13 @@ figcaption {
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 
+  max-width: $media-max;
+
+  @media (max-width: $media-max) and (min-width: $container-width) {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+
   .book {
     display: flex;
   }
