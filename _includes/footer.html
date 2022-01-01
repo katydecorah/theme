@@ -6,12 +6,7 @@
         class="bio-img-container" alt='Katy DeCorah' %}
       </a>
       <div class="bio-details">
-        <div>
-          Katy DeCorah is a frontend engineer living in upstate New York. She
-          works on the documentation team at
-          <a href="https://docs.mapbox.com">Mapbox</a> and tinkers at
-          <a href="https://doublegreat.dev">doublegreat.dev</a>.
-        </div>
+        <div>{% include bio.html %}</div>
         <div class="nav">
           {% for link in site.links %}{% if link.position == 'bottom' %}{%
           assign icon = link.icon | prepend: 'icons/' | append: '.svg' %}
