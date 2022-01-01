@@ -1,5 +1,4 @@
 .container {
-  @extend %clearfix;
   position: relative;
   max-width: $container-width;
   min-height: 1em;
@@ -12,20 +11,6 @@
 
 .container-large {
   max-width: $media-max;
-}
-
-.half-left,
-.half-right {
-  @include breakpoint(medium) {
-    float: left;
-    width: 48%;
-  }
-}
-
-.half-left {
-  @include breakpoint(medium) {
-    margin-right: 4%;
-  }
 }
 
 .columns {

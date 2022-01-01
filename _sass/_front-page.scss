@@ -181,38 +181,4 @@
   width: 45px;
   height: 45px;
   padding: 0.3em 0.5em;
-
-  @include breakpoint(medium) {
-    &:focus,
-    &:hover {
-      &::after,
-      &::before {
-        position: absolute;
-        left: 50%;
-        z-index: 100;
-        font-size: 0.7em;
-        transform: translate(-50%, -50%);
-      }
-
-      &::after {
-        top: -0.4em;
-        width: 0;
-        height: 0;
-        border-top: 0.4em solid var(--link);
-        border-right: 0.4em solid transparent;
-        border-left: 0.4em solid transparent;
-        content: "";
-      }
-
-      &::before {
-        top: -1.5em;
-        padding: 0.25em 0.75em;
-        color: var(--background);
-        font-size: $font-xs;
-        background: var(--link);
-        border-radius: 0.5em;
-        content: attr(title);
-      }
-    }
-  }
 }

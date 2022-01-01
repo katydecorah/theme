@@ -5,7 +5,16 @@ hideHeader: true
 ---
 
 <div class="container">
-  {% include category-paginator.html %}
+  {% if page.layout == 'category' %}
+  <div class="post-prev-next">
+    <div class="prev-next-btns">
+      <a href="{{ site.url }}" class="post-prev btn"
+        >{% include icons/chevron-left.svg %}
+        <span class="post-prev-title"> All posts</span></a
+      >
+    </div>
+  </div>
+  {% endif %}
   <div class="all-posts">{{ content }}</div>
   {% if page.title == 'Katy DeCorah' %}{% include paginator.html %}{% endif %}
 </div>
