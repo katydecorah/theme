@@ -13,20 +13,6 @@
   max-width: $media-max;
 }
 
-.half-left,
-.half-right {
-  @include breakpoint(medium) {
-    float: left;
-    width: 48%;
-  }
-}
-
-.half-left {
-  @include breakpoint(medium) {
-    margin-right: 4%;
-  }
-}
-
 .columns {
   columns: 2 10em;
   column-gap: 1em;
