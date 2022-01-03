@@ -20,8 +20,8 @@
   }
 }
 
-.post-prev,
-.post-next {
+.btn.post-prev,
+.btn.post-next {
   @extend %flex-center-inline;
 
   position: relative;

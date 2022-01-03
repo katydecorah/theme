@@ -1,4 +1,4 @@
-$map-height: 8em;
+$map-height: 10em;
 // scss-lint:disable VendorPrefixes, PropertySortOrder
 .post-header-has-map {
   margin-bottom: 1em;
@@ -29,6 +29,11 @@ $map-height: 8em;
 
 .post-map-header {
   position: relative;
+
+  .post-page & {
+    position: absolute;
+  }
+
   top: 0;
   left: 0;
   width: 100%;

@@ -57,6 +57,11 @@ picture {
   display: block;
 }
 
+svg {
+  width: 1em;
+  vertical-align: top;
+}
+
 // https://www.zachleat.com/web/fluid-images/
 img {
   max-width: 100%;
