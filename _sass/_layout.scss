@@ -35,62 +35,6 @@
   margin: 0;
 }
 
-.home-page {
-  .wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-
-  @include breakpoint(medium) {
-    .wrapper {
-      display: grid;
-      grid-template-columns: 45% 55%;
-    }
-
-    .content {
-      order: 2;
-      margin: 0 1em 0 3em;
-    }
-    .nav {
-      text-align: center;
-    }
-  }
-
-  @include breakpoint(medium) {
-    background: linear-gradient(
-      90deg,
-      var(--background-accent) 0%,
-      var(--background-accent) 47%,
-      var(--background) 47%,
-      var(--background) 100%
-    );
-  }
-
-  .content .btn {
-    margin-right: 0.5em;
-  }
-
-  .post-prev-next {
-    @extend %flex-wrap;
-  }
-
-  @include breakpoint(medium) {
-    .wrapper .container {
-      padding: 0;
-    }
-
-    .post-prev-next {
-      margin-bottom: 1em;
-    }
-  }
-}
-
-.all-posts {
-  .home-page & {
-    max-width: 600px;
-  }
-}
-
 .paginator {
   margin-top: 1em;
 }

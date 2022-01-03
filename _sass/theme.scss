@@ -4,14 +4,12 @@
 @import "type";
 @import "code";
 @import "layout";
-@import "posts";
-
+@import "../_layouts/default";
+@import "../_layouts/home";
+@import "../_layouts/post";
 @import "icons";
 @import "utilities";
 @import "print";
-
-@import "../_layouts/default";
-
 @import "../_includes/post/post-link";
 @import "../_includes/post/post-locations";
 @import "../_includes/post/note";

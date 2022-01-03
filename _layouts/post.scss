@@ -47,6 +47,12 @@
     max-width: $container-width - ($body-font-size * 2);
   }
 
+  video + video {
+    @include breakpoint(medium) {
+      margin-left: 0.65%;
+    }
+  }
+
   // scss-lint:disable SelectorFormat
   .photos,
   .cp_embed_iframe,
@@ -217,43 +223,6 @@
   }
 }
 
-.post-twitter {
-  margin-bottom: 1em;
-  svg {
-    width: 20px;
-    margin-right: 0.25em;
-    vertical-align: sub;
-  }
-}
-
-.tag {
-  display: inline-block;
-  margin-bottom: 0.25em;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-}
-
-.tag-block {
-  display: inline-block;
-  margin-right: 0.5em;
-  margin-bottom: 0.25em;
-  padding: 0.25em 0.75em;
-  font-size: $font-xs;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  background: var(--background-accent);
-  border-radius: 1em;
-}
-
-.post-date-updated {
-  display: block;
-  font-size: $font-xs;
-  text-align: inherit;
-}
-
 figure {
   margin: 0 auto;
 }
@@ -333,13 +302,5 @@ figcaption {
     flex-shrink: 0;
     width: 75px;
     margin-right: 0.5em;
-  }
-}
-
-.post {
-  video + video {
-    @include breakpoint(medium) {
-      margin-left: 0.65%;
-    }
   }
 }
