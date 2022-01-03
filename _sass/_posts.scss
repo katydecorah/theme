@@ -1,3 +1,8 @@
+.post .photos .map-iceland {
+  margin-bottom: 1em;
+  background: var(--always-background);
+}
+
 .post {
   @media (max-width: $container-width) {
     padding-right: 1em;
@@ -194,32 +199,6 @@
     }
   }
 
-  .note {
-    @extend %flex-container;
-    @extend %flex-space-between;
-    margin-bottom: 1em;
-    padding: 1em 1em 0;
-    background: var(--background-accent);
-    border-left: 0.25em solid var(--link);
-    border-radius: 0 $border-radius $border-radius 0;
-
-    .svg-wrapper {
-      @include breakpoint(medium) {
-        display: block;
-        margin-top: 0.25em;
-        color: var(--link);
-
-        svg {
-          width: 1.25em;
-          height: 1.25em;
-          margin-right: 1em;
-          fill: var(--link);
-        }
-      }
-      display: none;
-    }
-  }
-
   .instagram-media {
     width: 100%;
     margin: 1em auto;
@@ -244,15 +223,6 @@
     width: 20px;
     margin-right: 0.25em;
     vertical-align: sub;
-  }
-}
-
-.post-locations {
-  color: var(--text-accent);
-
-  .post-location svg {
-    color: var(--text-accent);
-    vertical-align: text-bottom;
   }
 }
 
@@ -282,124 +252,6 @@
   display: block;
   font-size: $font-xs;
   text-align: inherit;
-}
-
-.post-meta-header {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 0;
-  color: var(--text-accent);
-}
-
-svg {
-  width: 1em;
-  vertical-align: top;
-}
-.post-meta-breadcrumbs {
-  margin-bottom: 1.5em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  background-color: var(--background-accent);
-
-  .home-page & {
-    margin-bottom: 0.5em;
-
-    @include breakpoint(medium) {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      background: transparent;
-    }
-  }
-}
-.breadcrumbs,
-.post-meta-date {
-  font-size: $font-xs;
-}
-
-.post-meta-date {
-  .post-meta-header-has-map & {
-    display: inline-block;
-    margin-left: -0.5em;
-    padding: 0.1em 0.5em;
-    color: var(--text-color);
-    background-color: var(--background-accent);
-    border-radius: 0.25em;
-  }
-}
-
-.post-meta-link {
-  text-decoration: none;
-}
-
-.post-prev-next {
-  @extend %flex-container;
-
-  flex-flow: column wrap;
-
-  margin-top: 1em;
-
-  .prev-next-btns {
-    @extend %flex-container;
-    @extend %flex-wrap;
-  }
-
-  @include breakpoint(medium) {
-    flex-direction: row;
-  }
-
-  .btn {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
-
-.post-prev,
-.post-next {
-  @extend %flex-center-inline;
-
-  position: relative;
-  transition: var(--link-transition);
-
-  @include breakpoint(medium) {
-    min-height: 2em;
-  }
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    transition: var(--link-transition);
-  }
-}
-
-.post-prev {
-  margin-right: 1em;
-}
-
-.post-next {
-  @include breakpoint(small) {
-    margin-top: 1em;
-  }
-
-  @include breakpoint(medium) {
-    text-align: right;
-  }
-}
-
-.post-prev-title,
-.post-next-title {
-  display: block;
-
-  @include breakpoint(medium) {
-    width: 100%;
-  }
-}
-
-.post-prev-title {
-  padding-left: 0.5em;
-}
-
-.post-next-title {
-  padding-right: 0.5em;
 }
 
 figure {
@@ -459,26 +311,6 @@ figcaption {
   vertical-align: middle;
   background: var(--background-accent);
   border-radius: 1em;
-}
-
-.books {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
-  max-width: $media-max;
-
-  @media (max-width: $media-max) and (min-width: $container-width) {
-    padding-right: 1em;
-    padding-left: 1em;
-  }
-
-  .book {
-    display: block;
-    img {
-      height: 150px;
-      margin: 0;
-    }
-  }
 }
 
 .book-list {

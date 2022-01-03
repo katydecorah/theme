@@ -1,3 +1,30 @@
+.page-adventure-map {
+  .map {
+    width: 100%;
+    min-height: 429px;
+    margin-top: -3.75em;
+    margin-bottom: -3.5em;
+
+    .leaflet-popup-content,
+    .leaflet-popup-content-wrapper {
+      padding: 0;
+    }
+
+    h2 {
+      @extend %fancy-type;
+
+      margin: 0;
+      padding: 0.5em;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 0;
+      border-radius: 3px 3px 0 0;
+    }
+  }
+}
+
 .adventure-map-container,
 .adventures {
   display: none;

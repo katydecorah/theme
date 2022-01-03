@@ -1,0 +1,47 @@
+.post-meta-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  color: var(--text-accent);
+
+  svg {
+    width: 1em;
+    vertical-align: top;
+  }
+}
+
+.post-meta-breadcrumbs {
+  margin-bottom: 1.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: var(--background-accent);
+
+  .home-page & {
+    margin-bottom: 0.5em;
+
+    @include breakpoint(medium) {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      background: transparent;
+    }
+  }
+}
+
+.post-meta-link {
+  text-decoration: none;
+}
+
+.post-meta-date {
+  font-size: $font-xs;
+}
+
+.post-meta-date {
+  .post-meta-header-has-map & {
+    display: inline-block;
+    margin-left: -0.5em;
+    padding: 0.1em 0.5em;
+    color: var(--text-color);
+    background-color: var(--background-accent);
+    border-radius: 0.25em;
+  }
+}

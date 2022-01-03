@@ -5,5 +5,5 @@ hideHeader: true
 ---
 
 {% assign category = page.title | downcase %} {% for post in
-site.categories[category] %} {% include post/post-list.html post=post %} {%
+site.categories[category] %} {% include post/post-link.html post=post %} {%
 endfor %}

@@ -1,0 +1,25 @@
+.playlist-meta {
+  text-align: center;
+
+  svg {
+    margin-right: 0.25em;
+    vertical-align: sub;
+  }
+}
+
+.playlist-nostalgia {
+  display: block;
+  font-style: italic;
+}
+
+// scss-lint:disable VendorPrefixes
+.playlist {
+  margin-bottom: 2em;
+  columns: 3 290px;
+  column-gap: 3em;
+}
+
+.playlist-track {
+  break-inside: avoid;
+  margin-bottom: 1em;
+}

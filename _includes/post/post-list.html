@@ -1,8 +1,0 @@
-{% assign category = post.categories[0] %}
-<a href="{{ post.url }}" class="post-link">
-  <div class="post-meta">
-    <span class="post-date xs">{{ post.date | date: "%B %-d, %Y" }}</span>
-    <div><strong>{{ post.title }}</strong></div>
-    <div class="post-date">{{post.excerpt | strip_html}}</div>
-  </div>
-</a>

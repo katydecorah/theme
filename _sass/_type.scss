@@ -91,7 +91,8 @@ h4,
 
 %small,
 small,
-.small {
+.small,
+.text-small {
   font-size: $font-small;
 
   @include breakpoint(small) {
@@ -100,7 +101,7 @@ small,
 }
 
 %xs,
-.xs {
+.text-xs {
   font-size: $font-xs;
 
   @include breakpoint(small) {
@@ -175,4 +176,8 @@ blockquote {
 ::selection {
   color: var(--background-accent);
   background: var(--text-color);
+}
+
+.color-accent {
+  color: var(--text-accent);
 }
