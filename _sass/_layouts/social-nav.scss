@@ -11,12 +11,11 @@
 .nav-link {
   @extend %flex-child-no-shrink;
   @extend %flex-center-inline;
-
-  text-decoration: none;
   position: relative;
   width: 45px;
   height: 45px;
   padding: 0.3em 0.5em;
+  text-decoration: none;
 
   &.nav-link:hover,
   &.nav-link:focus {
