@@ -1,7 +1,9 @@
 {% assign category = post.categories[0] %}
 <div>
   <a href="{{ post.url }}" class="post-link">
-    <div class="color-accent text-xs">{{ post.date | date: "%B %-d, %Y" }}</div>
+    <div class="color-accent text-xsmall">
+      {{ post.date | date: "%B %-d, %Y" }}
+    </div>
     <div><strong>{{ post.title }}</strong></div>
     <div class="color-accent">{{post.excerpt | strip_html}}</div>
   </a>

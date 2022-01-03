@@ -335,3 +335,11 @@ figcaption {
     margin-right: 0.5em;
   }
 }
+
+.post {
+  video + video {
+    @include breakpoint(medium) {
+      margin-left: 0.65%;
+    }
+  }
+}
