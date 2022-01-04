@@ -76,7 +76,7 @@ const setButtonLabelAndStatus = (currentSetting) => {
   );
   modeToggleButton.setAttribute(
     "aria-label",
-    `Enable ${currentSetting === "dark" ? "light" : "dark"} mode`
+    `Use ${currentSetting === "dark" ? "light" : "dark"} theme`
   );
 };
 
