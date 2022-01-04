@@ -23,8 +23,8 @@
 
     @include breakpoint(medium) {
       display: block;
-      margin-right: 2em;
       align-self: start;
+      margin-right: 2em;
     }
   }
 
@@ -51,9 +51,9 @@
         text-align: center;
       }
       .bio-img.bio-img {
+        align-self: center;
         margin-right: 0;
         margin-bottom: 1em;
-        align-self: center;
       }
     }
   }
