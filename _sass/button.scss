@@ -6,6 +6,12 @@
   border-radius: 2em;
 }
 
+button {
+  font-family: inherit;
+  border: 0;
+  cursor: pointer;
+}
+
 .btn {
   @extend %btn;
   margin-bottom: 0.5em;
@@ -42,5 +48,14 @@
   &:hover,
   &:focus {
     color: var(--text-accent);
+  }
+}
+
+.btn--toggle {
+  margin: 1em 0;
+  background: var(--background);
+
+  svg {
+    margin-right: 0.5em;
   }
 }

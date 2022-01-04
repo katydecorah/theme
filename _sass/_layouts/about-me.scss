@@ -24,6 +24,7 @@
     @include breakpoint(medium) {
       display: block;
       margin-right: 2em;
+      align-self: start;
     }
   }
 
