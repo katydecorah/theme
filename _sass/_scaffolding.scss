@@ -49,28 +49,17 @@ a:not(.link-header) {
   margin: 0 auto;
 }
 
-%text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.pull-right {
-  float: right;
-}
-
-.pull-left {
-  float: left;
-}
-
 video {
   max-width: 100%;
 }
 
 picture {
   display: block;
+}
+
+svg {
+  width: 1em;
+  vertical-align: top;
 }
 
 // https://www.zachleat.com/web/fluid-images/
@@ -98,16 +87,4 @@ img {
   max-width: $container-width;
   margin-right: auto;
   margin-left: auto;
-}
-
-.post {
-  video + video {
-    @include breakpoint(medium) {
-      margin-left: 0.65%;
-    }
-  }
-}
-
-.rotate-left {
-  transform: rotate(-90deg);
 }

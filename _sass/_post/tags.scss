@@ -1,0 +1,19 @@
+.post-tags {
+  .post-page & {
+    margin-top: 0.25em;
+  }
+
+  .post-tag {
+    @extend %xs;
+
+    display: inline-block;
+    margin-right: 1.5em;
+    text-decoration: none;
+
+    svg {
+      width: 1em;
+      color: var(--link-hover);
+      vertical-align: middle;
+    }
+  }
+}

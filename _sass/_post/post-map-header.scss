@@ -24,15 +24,16 @@ $map-height: 8em;
       color: var(--always-dark);
       font-size: $h1-size-map;
     }
-
-    .no-flexbox & {
-      margin-top: 0.5em;
-    }
   }
 }
 
 .post-map-header {
-  position: absolute;
+  position: relative;
+
+  .post-page & {
+    position: absolute;
+  }
+
   top: 0;
   left: 0;
   width: 100%;
@@ -45,7 +46,7 @@ $map-height: 8em;
   }
 }
 
-.post-location-image {
+.post-map-header-image {
   display: none;
   max-width: none;
 
@@ -60,7 +61,11 @@ $map-height: 8em;
   }
 }
 
-.post .photos .map-iceland {
-  margin-bottom: 1em;
-  background: var(--always-background);
+.map-attribution {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  display: block;
+  color: var(--link-hover);
+  font-size: $font-xs;
 }

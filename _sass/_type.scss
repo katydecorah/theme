@@ -85,36 +85,19 @@ h4,
 }
 
 %large,
-.large {
+.text-large {
   font-size: 1.25em;
 }
 
 %small,
 small,
-.small {
+.text-small {
   font-size: $font-small;
-
-  @include breakpoint(small) {
-    font-size: 1em;
-  }
 }
 
 %xs,
-.xs {
+.text-xsmall {
   font-size: $font-xs;
-
-  @include breakpoint(small) {
-    font-size: 1em;
-  }
-}
-
-%xxs,
-.xxs {
-  font-size: 0.6em;
-
-  @include breakpoint(small) {
-    font-size: 1em;
-  }
 }
 
 ul,
@@ -166,13 +149,11 @@ blockquote {
   }
 }
 
-.big {
-  margin-bottom: 0.25em;
-  font-size: 7em;
-  line-height: 1;
-}
-
 ::selection {
   color: var(--background-accent);
   background: var(--text-color);
+}
+
+.color-accent {
+  color: var(--text-accent);
 }

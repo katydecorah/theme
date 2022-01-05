@@ -1,0 +1,19 @@
+{% assign media = "" | split: ',' %} {% if page.books %}{% assign media = media
+| push: 'books' %}{% endif %} {% if page.tracks %}{% assign media = media |
+push: 'playlist' %}{% endif %} {% if page.recipes %}{% assign media = media |
+push: 'recipes' %}{% endif %}
+
+<p>
+  The {% for item in media %}<a href="#{{item}}">{{item}}</a>{% if
+  forloop.rindex == 2 %}{% if forloop.length == 3%},{%endif %} and {% elsif
+  forloop.length != forloop.index %}, {%endif%}{% endfor %} I enjoyed this
+  season.
+</p>
+
+{%- if page.books -%}
+<h2 id="books">Books</h2>
+{% include post/books.html %} {%- endif -%} {%- if page.tracks -%}
+<h2 id="playlist">Playlist</h2>
+{% include post/playlist.html %} {%- endif -%} {%- if page.recipes -%}
+<h2 id="recipes">Recipes</h2>
+{% include post/recipes.html %} {%- endif -%}

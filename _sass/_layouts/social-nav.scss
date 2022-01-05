@@ -1,0 +1,33 @@
+.nav {
+  @extend %flex-center-inline;
+  @extend %flex-space-between;
+  @extend %flex-wrap;
+
+  width: 100%;
+  max-width: 300px;
+  margin-top: 1em;
+}
+
+.nav-link {
+  @extend %flex-child-no-shrink;
+  @extend %flex-center-inline;
+  position: relative;
+  width: 45px;
+  height: 45px;
+  padding: 0.3em 0.5em;
+  text-decoration: none;
+
+  &.nav-link:hover,
+  &.nav-link:focus {
+    color: var(--link-hover);
+    text-decoration: none;
+  }
+}
+
+.home-page {
+  @include breakpoint(medium) {
+    .nav {
+      text-align: center;
+    }
+  }
+}

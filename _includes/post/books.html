@@ -1,0 +1,9 @@
+<div class="books">
+  {% for book in page.books %}
+  <a class="book" href="{{book.url}}"
+    ><img
+      src="{{site.assets}}book-{{book.isbn}}.png"
+      alt="{{book.title}} by {{book.authors}}"
+  /></a>
+  {% endfor %}
+</div>

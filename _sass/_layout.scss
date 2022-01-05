@@ -9,10 +9,6 @@
   padding-left: 1em;
 }
 
-.container-large {
-  max-width: $media-max;
-}
-
 .columns {
   columns: 2 10em;
   column-gap: 1em;
@@ -37,4 +33,8 @@
   display: inline-block;
   max-width: none;
   margin: 0;
+}
+
+.paginator {
+  margin-top: 1em;
 }

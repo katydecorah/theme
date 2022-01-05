@@ -1,0 +1,7 @@
+<ul>
+  {% for recipe in page.recipes %}
+  <li>
+    <a href="{{recipe.url}}">{{ recipe.title }}</a> from {{ recipe.site }}
+  </li>
+  {% endfor %}
+</ul>

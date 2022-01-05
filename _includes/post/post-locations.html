@@ -1,5 +1,5 @@
 {% if page.locations %}
-<div class="post-tags post-locations">
+<div class="post-tags post-locations color-accent">
   {% for location in page.locations %}<span class="post-tag post-location"
     >{% include icons/map-pin.svg %} {{ location | replace:',',', '}}</span
   >{% endfor %}
