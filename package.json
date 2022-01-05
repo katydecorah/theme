@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/katydecorah/theme#readme",
   "devDependencies": {
-    "eslint": "^8.5.0",
+    "eslint": "^8.6.0",
     "eslint-config-prettier": "^8.3.0",
     "feather-icons": "^4.28.0",
     "husky": "^7.0.4",
