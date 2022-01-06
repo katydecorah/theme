@@ -60,7 +60,7 @@
   .gist,
   iframe,
   .playlist,
-  .collection,
+  .collection-items,
   .media,
   table {
     position: relative;
@@ -177,29 +177,29 @@
     .collection-meta .btn {
       margin-bottom: 0;
     }
-    .collection-items {
-      display: grid;
-      grid-gap: 1rem 0.5rem;
-      grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  }
+  .collection-items {
+    display: grid;
+    grid-gap: 1rem 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  }
+  .collection-items--large {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  }
+  .collection-item {
+    display: block;
+    font-size: 16px;
+    line-height: 1.3;
+    text-decoration: none;
+    .collection-item-img-recipe {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
     }
-    .collection-items--large {
-      grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
-    }
-    .collection-item {
-      display: block;
-      font-size: 16px;
-      line-height: 1.3;
-      text-decoration: none;
-      .collection-item-img-recipe {
-        width: 100%;
-        height: 140px;
-        object-fit: cover;
-      }
-    }
+  }
 
-    .collection-item-meta {
-      color: var(--text-accent);
-    }
+  .collection-item-meta {
+    color: var(--text-accent);
   }
 
   table {
