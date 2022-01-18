@@ -1,0 +1,18 @@
+<div class="collection-item wordle-item">
+  <div aria-hidden="true" class="wordle">
+    <div class="wordle-grid">
+      {% for row in include.wordle.boardWords %}{% assign pieces = row | split:
+      ' ' %}{% for piece in pieces %}
+      <div class="wordle-piece wordle-piece--{{piece}}"></div>
+      {% endfor %}{% endfor %}
+    </div>
+  </div>
+  <div class="collection-item-meta">
+    <div>
+      <strong
+        >Wordle {{include.wordle.number}} {{include.wordle.score}}/6</strong
+      >
+    </div>
+    <div>{{include.wordle.date | date: '%b %-d, %Y'}}</div>
+  </div>
+</div>
