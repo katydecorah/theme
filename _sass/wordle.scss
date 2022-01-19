@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 150px;
+  height: 130px;
   background-color: var(--background-accent);
-  border-radius: 0.25em 0.25em 0 0;
+  border-radius: 0.25em;
 }
 .wordle-grid {
   display: grid;
@@ -14,9 +14,6 @@
 }
 .wordle-item .collection-item-meta {
   padding: 0.25em 0.5em;
-  border: 1px solid var(--background-accent);
-  border-top: 0;
-  border-radius: 0 0 0.25em 0.25em;
 }
 .wordle-piece {
   width: 1em;
