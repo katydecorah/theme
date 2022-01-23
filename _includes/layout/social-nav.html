@@ -1,11 +1,11 @@
 <div class="nav">
-  {% for link in site.links %}{% if link.position == 'bottom' %}{% assign icon =
-  link.icon | prepend: 'icons/' | append: '.svg' %}
+  {% for link in site.links %}{% assign icon = link.icon | prepend: 'icons/' |
+  append: '.svg' %}
   <a
     href="{{ link.url }}"
     aria-label="{{ link.text }}"
     title="{{ link.text }}"
     class="nav-link"
     >{% include {{icon}} %}</a
-  >{% endif %}{% endfor %}
+  >{% endfor %}
 </div>
