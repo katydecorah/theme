@@ -14,6 +14,7 @@ button {
 
 .btn {
   @extend %btn;
+
   margin-bottom: 0.5em;
   font-size: $font-small;
   background: var(--background-accent);
@@ -45,6 +46,7 @@ button {
 
 .btn-disabled {
   color: var(--text-accent);
+
   &:hover,
   &:focus {
     color: var(--text-accent);

@@ -207,7 +207,7 @@
     caption {
       padding: 1em 0;
       color: var(--text-color);
-      font: italic 85%/1 "arial", sans-serif;
+      font: italic 85%/1 arial, sans-serif;
       text-align: center;
     }
 
@@ -299,6 +299,7 @@ figcaption {
 .reversefootnote,
 .footnote {
   @extend %xs;
+
   margin: 0 0.25em;
   padding: 0 0.25em;
   color: var(--text-color);
@@ -309,6 +310,7 @@ figcaption {
 
 .badge {
   @extend %xs;
+
   padding: 0 0.5em;
   vertical-align: middle;
   background: var(--background-accent);
@@ -319,7 +321,6 @@ figcaption {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-
   max-width: $media-max;
 
   @media (max-width: $media-max) and (min-width: $container-width) {
