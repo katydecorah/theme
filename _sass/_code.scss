@@ -1,6 +1,7 @@
 code,
 pre {
   @extend %code-type;
+
   color: var(--text-accent);
   white-space: pre-wrap;
   word-break: break-word;

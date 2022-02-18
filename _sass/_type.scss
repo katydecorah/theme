@@ -44,6 +44,7 @@ h4 {
 h1,
 .h1 {
   @extend %fancy-type;
+
   margin-top: 0;
   margin-bottom: 1em;
   font-size: $h1-size;

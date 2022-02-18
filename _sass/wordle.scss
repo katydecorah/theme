@@ -6,24 +6,29 @@
   background-color: var(--background-accent);
   border-radius: 0.25em;
 }
+
 .wordle-grid {
   display: grid;
   grid-gap: 0.2em;
   grid-template-rows: repeat(6, auto);
   grid-template-columns: repeat(5, 1em);
 }
+
 .wordle-item .collection-item-meta {
   padding: 0.25em 0.5em;
 }
+
 .wordle-piece {
   width: 1em;
   height: 1em;
   background: var(--text-accent);
   border-radius: 0.25em;
 }
+
 .wordle-piece--yes {
   background: var(--highlightseven);
 }
+
 .wordle-piece--almost {
   background: var(--highlighteight);
 }

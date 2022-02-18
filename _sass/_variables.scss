@@ -1,7 +1,6 @@
 //////////////// primary
 
 $list: background background-accent text-accent link link-hover text-color;
-
 $background: #f6f6f6;
 $background-accent: #fff;
 $text-color: #2d323e;
@@ -76,6 +75,7 @@ $highlightnine: #777474;
 [data-user-color-scheme="dark"] .toggle-button__icon-dark {
   display: block;
 }
+
 [data-user-color-scheme="light"] .toggle-button__icon-dark,
 [data-user-color-scheme="dark"] .toggle-button__icon-light {
   display: none;
@@ -84,27 +84,21 @@ $highlightnine: #777474;
 $body-font-size: 20px;
 $font-small: 18px;
 $font-xs: 16px;
-
 $code-font-family: "IBM Plex Mono", "Courier New", monospace;
 $fancy-font-family: "IBM Plex Serif", Georgia, serif;
 $body-font-family: "IBM Plex Sans", Arial, sans-serif;
-
 $body-font-weight: 300;
 $body-font-bold: 700;
 $fancy-font-weight: 400;
-
 $container-width: 700px;
 $media-max: 1000px;
 $link-transition: 0.1s;
-
 $border-radius-img: 0.15em;
-
 $h1-size: 1.602em;
 $h1-size-map: $h1-size;
 $h2-size: 1.266em;
 $h3-size: 1.125em;
 $h4-size: 1em;
-
 $border-radius: 0.2em;
 $body-padding-top: 4em;
 
@@ -126,7 +120,7 @@ $body-padding-top: 4em;
     border: 1px solid #fff;
     border-radius: $border-radius;
 
-    &:before {
+    &::before {
       position: absolute;
       top: calc(100% + 0.5em);
       width: 100%;
@@ -149,7 +143,7 @@ $highlighters: highlightone highlighttwo highlightthree highlightfour
     border: 1px solid #fff;
     border-radius: $border-radius;
 
-    &:before {
+    &::before {
       position: absolute;
       top: calc(100% + 0.5em);
       width: 100%;
