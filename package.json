@@ -21,7 +21,7 @@
   "homepage": "https://github.com/katydecorah/theme#readme",
   "devDependencies": {
     "eslint": "^8.10.0",
-    "eslint-config-prettier": "^8.4.0",
+    "eslint-config-prettier": "^8.5.0",
     "feather-icons": "^4.28.0",
     "husky": "^7.0.4",
     "prettier": "^2.5.1",
