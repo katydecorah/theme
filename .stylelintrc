@@ -7,11 +7,7 @@
   "rules": {
     "scss/no-global-function-names": null,
     "no-descending-specificity": null,
-    "function-no-unknown": null,
     "selector-class-pattern": ".",
-    "scss/percent-placeholder-pattern": ".",
-    "custom-property-pattern": ".",
-    "value-keyword-case": null,
-    "number-max-precision": null
+    "custom-property-pattern": "."
   }
 }

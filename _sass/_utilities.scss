@@ -20,14 +20,12 @@
   justify-content: left;
 }
 
-// scss-lint:disable VendorPrefixes, PropertySortOrder
 %flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-// scss-lint:disable VendorPrefixes, PropertySortOrder
 %flex-center-inline {
   display: inline-flex;
   align-items: center;
@@ -71,8 +69,7 @@
 // visually hide - still available to screen readers
 // https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
 %u-visually-hidden:not(:focus):not(:active),
-.visually-hidden,
-%u-visually-hidden--hide-focus {
+.visually-hidden {
   position: absolute;
   width: 0.1rem;
   height: 0.1rem;
