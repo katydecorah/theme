@@ -6,7 +6,10 @@
       <div class="text-xsmall {% if layout.hideHeader %} show-small{% endif %}">
         <a class="post-meta-link" href="{{site.url}}">Katy DeCorah</a>
         {% if page.title != 'Katy DeCorah' %} {% include icons/chevron-right.svg
-        %} {% if page.categories[0] %}
+        %} {% if site.baseurl and page.title != site.title %}
+        <a class="post-meta-link" href="{{site.baseurl}}/">{{site.title}}</a>
+        {% include icons/chevron-right.svg %} {% endif %} {% if
+        page.categories[0] %}
         <a class="post-meta-link" href="/{{ page.categories[0] | downcase}}"
           >{{ page.categories[0] | downcase}}</a
         >
