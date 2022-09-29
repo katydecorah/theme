@@ -15,7 +15,9 @@ hideHeader: true
     </div>
   </div>
   {% endif %}
-  <div class="all-posts">{{ content }}</div>
+  <ul class="all-posts">
+    {{ content }}
+  </ul>
   {% if page.title == 'Katy DeCorah' %}{% include layout/paginator.html %}{%
   endif %}
 </div>
