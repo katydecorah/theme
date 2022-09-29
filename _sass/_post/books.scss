@@ -3,6 +3,8 @@
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
   max-width: $media-max;
+  list-style: none;
+  padding: 0;
 
   @media (max-width: $media-max) and (min-width: $container-width) {
     padding-right: 1em;

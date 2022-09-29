@@ -29,7 +29,7 @@
   }
 
   ol,
-  ul {
+  ul:not(.book-list, .collection-items, .playlist, .books) {
     max-width: $container-width - ($body-font-size * 2);
   }
 
@@ -71,8 +71,8 @@
     border: 0;
 
     @media (max-width: $media-max) and (min-width: $container-width) {
-      padding-right: 1em;
-      padding-left: 1em;
+      padding-right: 1em !important;
+      padding-left: 1em !important;
     }
 
     img,
@@ -170,6 +170,8 @@
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
     margin: 1em auto;
+    list-style: none;
+    padding: 0;
 
     .collection-item {
       display: block;
@@ -321,6 +323,8 @@ figcaption {
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   max-width: $media-max;
+  padding: 0;
+  list-style: none;
 
   @media (max-width: $media-max) and (min-width: $container-width) {
     padding-right: 1em;

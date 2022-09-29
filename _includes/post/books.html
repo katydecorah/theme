@@ -1,9 +1,10 @@
-<div class="books">
+<ul class="books">
   {% for book in page.books %}
-  <a class="book" href="{{book.url}}"
-    ><img
-      src="{{site.assets}}book-{{book.isbn}}.png"
-      alt="{{book.title}} by {{book.authors}}"
-  /></a>
+  <li>
+    <a class="book" href="{{book.url}}">
+      <img src="{{site.assets}}book-{{book.isbn}}.png" alt="" />
+      <span class="sr-only">{{book.title}} by {{book.authors}}</span>
+    </a>
+  </li>
   {% endfor %}
-</div>
+</ul>
