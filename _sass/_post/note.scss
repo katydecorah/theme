@@ -25,3 +25,16 @@
     display: none;
   }
 }
+
+.note-genres {
+  display: block;
+  padding-bottom: 1em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  font-size: 16px;
+
+  .tag {
+    background: var(--background);
+    font-size: 14px;
+  }
+}

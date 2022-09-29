@@ -1,4 +1,8 @@
 .all-posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
   .home-page & {
     max-width: 600px;
   }

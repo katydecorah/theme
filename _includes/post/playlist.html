@@ -8,9 +8,9 @@ img.html src=src class='img-half' alt='album art' width='1000' height='1000' %}
 </p>
 {% endif %}
 
-<div class="playlist">
+<ul class="playlist">
   {% for tracks in page.tracks %}
-  <div class="playlist-track">
+  <li class="playlist-track">
     <div class="track-name">{{ tracks.track }}</div>
     <div class="track-meta">
       <span class="track-artist">{{ tracks.artist }} </span>
@@ -18,6 +18,6 @@ img.html src=src class='img-half' alt='album art' width='1000' height='1000' %}
         - {{ tracks.album }}</span
       >{% endif %}
     </div>
-  </div>
+  </li>
   {% endfor %}
-</div>
+</ul>
