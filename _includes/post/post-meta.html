@@ -1,26 +1,31 @@
 <header
   class="post-meta-header{% if page.locations %} post-meta-header-has-map{% endif %}"
 >
-  <div class="post-meta-breadcrumbs">
+  <nav class="post-meta-breadcrumbs">
     <div class="container">
-      <div class="text-xsmall {% if layout.hideHeader %} show-small{% endif %}">
-        <a class="post-meta-link" href="{{site.url}}">Katy DeCorah</a>
-        {% if page.title != 'Katy DeCorah' %} {% include icons/chevron-right.svg
-        %} {% if site.baseurl != '' and page.title != site.title %}
-        <a class="post-meta-link" href="{{site.baseurl}}/">{{site.title}}</a>
-        {% include icons/chevron-right.svg %} {% endif %} {% if
-        page.categories[0] %}
-        <a class="post-meta-link" href="/{{ page.categories[0] | downcase}}"
-          >{{ page.categories[0] | downcase}}</a
-        >
+      <ul class="text-xsmall {% if layout.hideHeader %} show-small{% endif %}">
+        <li><a class="post-meta-link" href="{{site.url}}">Katy DeCorah</a></li>
+        {% if page.title != 'Katy DeCorah' %}
+        <li>{% include icons/chevron-right.svg %}</li>
+        {% if site.baseurl != '' and page.title != site.title %}
+        <li>
+          <a class="post-meta-link" href="{{site.baseurl}}/">{{site.title}}</a>
+        </li>
+        <li>{% include icons/chevron-right.svg %}</li>
+        {% endif %} {% if page.categories[0] %}
+        <li>
+          <a class="post-meta-link" href="/{{ page.categories[0] | downcase}}"
+            >{{ page.categories[0] | downcase}}</a
+          >
+        </li>
         {% elsif page.titleDowncase %}
-        <span class="post-meta-link">{{ page.title | downcase }}</span>
+        <li class="post-meta-link">{{ page.title | downcase }}</li>
         {% else %}
-        <span class="post-meta-link">{{ page.title }}</span>
+        <li class="post-meta-link">{{ page.title }}</li>
         {% endif %} {% endif %}
-      </div>
+      </ul>
     </div>
-  </div>
+  </nav>
   {% if page.categories[0] %}
   <div class="container">
     <div class="post-meta-date">
