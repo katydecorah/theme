@@ -13,11 +13,6 @@
         id="content"
         class="{% if page.layout == 'default' %}container {% endif %}content"
       >
-        <h1
-          class="{%- if page.hideTitle or layout.hideTitle -%}visually-hidden{%- endif -%}"
-        >
-          {{ page.title }}
-        </h1>
         {{ content }}
       </main>
       {%- include layout/footer.html -%} {%- include layout/end.html -%}
