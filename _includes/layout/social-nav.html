@@ -1,11 +1,13 @@
 <div class="nav">
-  {% for link in site.links %}{% assign icon = link.icon | prepend: 'icons/' |
-  append: '.svg' %}
+  {%- for link in site.links -%}
+  {%- assign icon = link.icon | prepend: 'icons/' | append: '.svg' -%}
+  {%- assign checkPath = link.url | slice: 0 -%}
   <a
-    href="{{ link.url }}"
+    href="{%- if checkPath == '/' -%}{{site.url}}{%- endif -%}{{ link.url }}"
     aria-label="{{ link.text }}"
     title="{{ link.text }}"
     class="nav-link"
     >{% include {{icon}} %}</a
-  >{% endfor %}
+  >
+  {%- endfor -%}
 </div>
