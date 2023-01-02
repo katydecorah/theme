@@ -1,8 +1,8 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>
-  {% if page.title != 'Katy DeCorah' %}{{ page.title }} | Katy DeCorah{% else
-  %}Katy DeCorah{% endif %}
+  {%- if page.title != 'Katy DeCorah' -%}{{ page.title }} | Katy DeCorah{%- else
+  -%}Katy DeCorah{%- endif -%}
 </title>
 <meta
   name="google-site-verification"
@@ -10,7 +10,7 @@
 />
 <meta
   name="description"
-  content="{% if page.layout != 'front-page' %}{{page.title}} | Katy DeCorah | {% endif %}{{ site.description }}"
+  content="{% if page.description %}{{ page.description | truncatewords: 30 }}{% elsif page.excerpt %}{{page.excerpt | strip_html | strip_newlines | truncatewords: 30}}{% else %}{{ site.description }}{% endif %}"
 />
 <meta name="author" content="Katy DeCorah" />
 {%- if page.noIndex -%}<meta name="robots" content="noindex" />{%- endif -%}
