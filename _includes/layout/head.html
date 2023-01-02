@@ -12,6 +12,8 @@
   name="description"
   content="{% if page.layout != 'front-page' %}{{page.title}} | Katy DeCorah | {% endif %}{{ site.description }}"
 />
+<meta name="author" content="Katy DeCorah" />
+{%- if page.noIndex -%}<meta name="robots" content="noindex" />{%- endif -%}
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="twitter:site" content="{{site.twitter}}" />
 <meta property="og:site_name" content="{{site.title}}" />
@@ -46,6 +48,9 @@
 <meta name="p:domain_verify" content="5ec32589eebd416f82c15e20ba199848" />
 <link rel="manifest" href="/manifest.json" />
 <meta name="theme-color" content="#fff" />
+<link rel="me" href="https://github.com/katydecorah" />
+<link rel="me" href="https://twitter.com/katydecorah" />
+<link rel="me" href="https://front-end.social/@katydecorah" />
 {% feed_meta %}
 <link
   href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,400i,700|IBM+Plex+Serif&display=swap"
