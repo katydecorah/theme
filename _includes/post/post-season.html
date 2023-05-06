@@ -12,7 +12,8 @@ push: 'recipes' %}{% endif %}
 
 {%- if page.books -%}
 <h2 id="books">Books</h2>
-{% include post/books.html %} {%- endif -%} {%- if page.tracks -%}
+{% include post/books.html books=page.books %} {%- endif -%} {%- if page.tracks
+-%}
 <h2 id="playlist">Playlist</h2>
 {% include post/playlist.html %} {%- endif -%} {%- if page.recipes -%}
 <h2 id="recipes">Recipes</h2>
