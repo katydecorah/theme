@@ -1,6 +1,23 @@
 <ul title="Books" class="book-list">
   {% for book in include.books %}
   <li class="book">
+    {%- if book.tags[0] == 'hide' -%}
+    <div
+      class="book-img"
+      style="background: var(--background-accent); border-radius: 5px"
+    ></div>
+    <div>
+      <div class="book-name">(I decided not to share this book)</div>
+      <div class="book-meta">
+        <div class="book-authors"></div>
+        <div>
+          <span class="sr-only">finished on</span> {{book.dateFinished | date:
+          '%b %-d, %Y'}}
+        </div>
+        <div class="book-tags"></div>
+      </div>
+    </div>
+    {% else %}
     <div class="book-img">
       <img
         loading="lazy"
@@ -15,7 +32,7 @@
           <span class="sr-only">by</span> {{ book.authors | join: ', ' }}
         </div>
         <div>
-          <span class="sr-only">finished on</span> {{book.dateFinished| date:
+          <span class="sr-only">finished on</span> {{book.dateFinished | date:
           '%b %-d, %Y'}}
         </div>
         <div class="book-tags">
@@ -26,6 +43,7 @@
         </div>
       </div>
     </div>
+    {%-endif -%}
   </li>
   {% endfor %}
 </ul>
