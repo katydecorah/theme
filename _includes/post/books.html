@@ -1,10 +1,46 @@
-<ul class="books">
-  {% for book in page.books %}
-  <li>
-    <a class="book" href="{{book.url}}">
-      <img src="{{site.assets}}book-{{book.isbn}}.png" alt="" />
-      <span class="sr-only">{{book.title}} by {{book.authors}}</span>
-    </a>
+<ul title="Books" class="book-list">
+  {% for book in include.books %}
+  <li class="book">
+    {%- if book.tags[0] == 'hide' -%}
+    <div class="book-img book-hide"></div>
+    <div>
+      <div class="book-name">(I decided not to share this book)</div>
+      <div class="book-meta">
+        <div class="book-authors"></div>
+        <div>
+          <span class="sr-only">finished on</span> {{book.dateFinished | date:
+          '%b %-d, %Y'}}
+        </div>
+        <div class="book-tags"></div>
+      </div>
+    </div>
+    {% else %}
+    <div class="book-img">
+      <img
+        loading="lazy"
+        alt=""
+        src="https://yo.katydecorah.com/book-{{book.isbn}}.png"
+      />
+    </div>
+    <div>
+      <div class="book-name">{{ book.title }}</div>
+      <div class="book-meta">
+        <div class="book-authors">
+          <span class="sr-only">by</span> {{ book.authors | join: ', ' }}
+        </div>
+        <div>
+          <span class="sr-only">finished on</span> {{book.dateFinished | date:
+          '%b %-d, %Y'}}
+        </div>
+        <div class="book-tags">
+          {% if book.tags contains 'recommend' %}{% include recommend.html %}{%
+          endif %} {% if book.tags contains 'skip' %}{% include skip.html %}{%
+          endif %} {% if book.tags contains 'content warning' %}{% include
+          warning.html %}{% endif %}
+        </div>
+      </div>
+    </div>
+    {%-endif -%}
   </li>
   {% endfor %}
 </ul>
