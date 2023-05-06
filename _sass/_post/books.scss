@@ -19,4 +19,21 @@
       margin: 0;
     }
   }
+
+  .book-tags {
+    display: flex;
+    column-gap: 0.25em;
+  }
+}
+
+.book-recommend {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  background: var(--background-accent);
+  border-radius: 100%;
+  justify-content: center;
+  color: var(--link);
 }
