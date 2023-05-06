@@ -2,10 +2,7 @@
   {% for book in include.books %}
   <li class="book">
     {%- if book.tags[0] == 'hide' -%}
-    <div
-      class="book-img"
-      style="background: var(--background-accent); border-radius: 5px"
-    ></div>
+    <div class="book-img book-hide"></div>
     <div>
       <div class="book-name">(I decided not to share this book)</div>
       <div class="book-meta">
