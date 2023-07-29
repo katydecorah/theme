@@ -1,6 +1,6 @@
 {
   "name": "theme",
-  "version": "4.18.0",
+  "version": "4.19.0",
   "description": "Jekyll theme for katydecorah.com",
   "main": "index.js",
   "scripts": {
