@@ -11,7 +11,7 @@ img.html src=src class='img-half' alt='album art' width='1000' height='1000' %}
 <ul class="playlist">
   {% for tracks in page.tracks %}
   <li class="playlist-track">
-    <div class="track-name">{{ tracks.track }}</div>
+    <div class="track-name"><strong>{{ tracks.track }}</strong></div>
     <div class="track-meta">
       <span class="track-artist">{{ tracks.artist }} </span>
       {% if tracks.album and tracks.album != '' %}<span class="track-album">

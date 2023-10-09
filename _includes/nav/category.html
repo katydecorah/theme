@@ -1,0 +1,16 @@
+<ul class="nav-category">
+  {% assign activeCategory = page.title | downcase %} {% assign categories =
+  site.categories | sort %} {% for category in categories %} {% assign
+  category_name = category | first %} {% assign category_posts = category | last
+  %}
+  <li>
+    {% if category_name == activeCategory %} {{category_name}} {% else %}
+    <a href="/{{category_name}}"> {{category_name}} </a>
+    {% endif %}
+  </li>
+  {% endfor %}
+  <li>
+    {% if activeCategory == 'all' %} all {% else %} <a href="/all"> all </a> {%
+    endif %}
+  </li>
+</ul>
