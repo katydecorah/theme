@@ -408,6 +408,7 @@ picture {
   max-width: 500px;
 }
 
+.playlist-container,
 .photos {
   display: grid;
   grid-gap: 1em;
@@ -422,6 +423,10 @@ picture {
 }
 
 @media (width >= 50rem) {
+  .playlist-media {
+    grid-column: span 8;
+  }
+
   .photos .img-half {
     grid-column: span 6;
   }

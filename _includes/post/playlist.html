@@ -1,13 +1,15 @@
 <div class="playlist-container">
-  {% capture src %}{{page.playlist | slugify}}.png{% endcapture %} {% include
-  img.html src=src class='img-half' alt='album art' width='1000' height='1000'
-  %} {% if page.spotify %}
-  <p class="playlist-meta">
-    <a href="{{ page.spotify }}" class="btn"
-      >{% include icons/headphones.svg %} Listen on Spotify</a
-    >
-  </p>
-  {% endif %}
+  <div class="playlist-media">
+    {% capture src %}{{page.playlist | slugify}}.png{% endcapture %} {% include
+    img.html src=src class='img-half' alt='album art' width='1000' height='1000'
+    %} {% if page.spotify %}
+    <p class="playlist-meta">
+      <a href="{{ page.spotify }}" class="btn"
+        >{% include icons/headphones.svg %} Listen on Spotify</a
+      >
+    </p>
+    {% endif %}
+  </div>
 
   <ul class="playlist">
     {% for tracks in page.tracks %}
