@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pretty-quick": "pretty-quick",
-    "lint": "stylelint \"_sass/**/*.scss\" --fix && eslint .",
+    "lint": "stylelint \"assets/site.css\" --fix && eslint .",
     "test": "npm run lint"
   },
   "repository": {

@@ -1,19 +1,30 @@
-<div class="post-prev-next">
+<div class="prev-next-btns-container">
+  {% assign currentCategory = page.categories | first %}
+  <div><strong>Keep reading {{currentCategory}}</strong></div>
+
   <div class="prev-next-btns">
     {% for category in site.categories %}{% assign catg_name = category.first
-    %}{% if catg_name == page.categories[0] %}{% assign catg_posts =
-    category.last %}{% endif %}{% endfor %}{% for post in catg_posts %}{% if
-    post.url == page.url %}{% unless forloop.last %}{% assign prev =
-    catg_posts[forloop.index] %}<a href="{{ prev.url }}" class="post-prev btn">
+    %}{% if catg_name == currentCategory %}{% assign catg_posts = category.last
+    %}{% endif %}{% endfor %}{% for post in catg_posts %}{% if post.url ==
+    page.url %}{% unless forloop.last %}{% assign prev =
+    catg_posts[forloop.index] %}<a href="{{ prev.url }}" class="icon-link">
       {% include icons/chevron-left.svg %}
-      <span class="post-prev-title">Older</span> </a
-    >{% endunless %}{% endif %}{% assign next = post %}{% endfor %}{% for post
+      <span>Older</span> </a
+    >{% endunless %}{% endif %}{% assign next = post %}{% endfor %} {% for post
     in catg_posts %}{% if post.url == page.url %}{% unless forloop.first %}<a
       href="{{ next.url }}"
-      class="post-next btn"
+      class="icon-link"
     >
-      <span class="post-next-title">Newer</span> {% include
-      icons/chevron-right.svg %}</a
+      <span>Newer</span> {% include icons/chevron-right.svg %}</a
     >{% endunless %}{% endif %}{% assign next = post %}{% endfor %}
   </div>
+  {% comment %} {% assign posts = site.categories[currentCategory] |
+  find_exp:"item", "item.url != page.url" %} {% assign supriseMe = posts |
+  sample: 1 %}
+  <div>
+    <a class="icon-link" href="{{supriseMe.url}}">
+      {% include icons/gift.svg %} Suprise me</a
+    >
+  </div>
+  {% endcomment %}
 </div>

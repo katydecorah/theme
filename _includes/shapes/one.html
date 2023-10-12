@@ -1,0 +1,6 @@
+<div class="shape">
+  {% assign choices = "shape-1,shape-2,shape-3,shape-4" | split: "," %} {%
+  assign shapes = choices | sample: 4 %} {% for s in shapes %}
+  <div class="{{ s }}"></div>
+  {% endfor %}
+</div>

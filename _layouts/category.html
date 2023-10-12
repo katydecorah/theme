@@ -1,9 +1,29 @@
 ---
-layout: home
-hideTitle: true
-hideHeader: true
+layout: default
 ---
 
-{% assign category = page.title | downcase %} {% for post in
-site.categories[category] %} {% include post/post-link.html post=post %} {%
-endfor %}
+{% assign category = page.title | downcase %} {% if category == 'all' %} {%
+assign posts = site.posts %} {% else %} {% assign posts =
+site.categories[category] %} {% endif %}
+
+<div class="post-header">
+  <h1>{{page.title}}</h1>
+  <div class="nav-category-container">
+    <strong>Categories</strong>{% include navigation-category.html %}
+  </div>
+</div>
+
+<ul class="posts">
+  {% for post in posts %} {% assign excerpt = post.excerpt | strip_html |
+  strip_newlines %}
+  <li>
+    <div>
+      <strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
+    </div>
+    <div>
+      {{ post.date | date: "%B %-d, %Y" }} {% if excerpt != '' %} &bull;
+      {{excerpt}} {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>

@@ -11,18 +11,8 @@ replace: ',','%2C'}}%5D {%- unless forloop.last-%}%2C{%- endunless-%} {%-
 endfor-%} %5D%0A%5D%0A%7D%0A%7D%29/auto {%- else-%} {%- for coordinate in
 page.coordinates limit:1-%}{{ coordinate }} {%- endfor-%},{{zoom}} {%- endif-%}
 {%- endcapture-%}
-
-<div class="post-map-header">
-  <div
-    style="background-image:url(https://api.mapbox.com/styles/v1/{{mapid}}/static/{{place}}/1280x200@2x?access_token={{ site.mapbox-token }}&attribution=false&logo=false)"
-    class="post-map-header-image"
-  ></div>
-  <a
-    class="map-attribution"
-    href="https://www.mapbox.com/about/maps/"
-    target="_blank"
-    rel="noopener"
-    >© Mapbox © OpenStreetMap</a
-  >
-</div>
+<div
+  style="background-image:url(https://api.mapbox.com/styles/v1/{{mapid}}/static/{{place}}/1280x200@2x?access_token={{ site.mapbox-token }})"
+  class="post-map-header-image"
+></div>
 {%- endif-%}

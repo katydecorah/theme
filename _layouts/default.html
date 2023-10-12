@@ -1,26 +1,130 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
   <head>
-    {%- include layout/head.html -%}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {%- if page.title != 'Katy DeCorah' -%}{{ page.title }} | Katy DeCorah{%-
+      else -%}Katy DeCorah{%- endif -%}
+    </title>
+    <meta
+      name="google-site-verification"
+      content="F5aWLWH-V1jAhith3Ybjt5dDtL4S8Yc5Z53yTvPFhaM"
+    />
+    <meta
+      name="description"
+      content="{% if page.description %}{{ page.description | truncatewords: 30 }}{% elsif page.excerpt %}{{page.excerpt | strip_html | strip_newlines | truncatewords: 30}}{% else %}{{ site.description }}{% endif %}"
+    />
+    <meta name="author" content="Katy DeCorah" />
+    {%- if page.noIndex -%}
+    <meta name="robots" content="noindex" />
+    {%- endif -%}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:site_name" content="{{site.title}}" />
+    <meta property="og:url" content="{{site.url}}{{page.url}}" />
+    <meta property="og:title" content="{{page.title}}" />
+    <meta
+      property="og:description"
+      content="{% if page.description %}{{ page.description | truncatewords: 30 }}{% elsif page.excerpt %}{{page.excerpt | strip_html | strip_newlines |  truncatewords: 30}}{% else %}{{ site.description }}{% endif %}"
+    />
+    <meta
+      name="st:image"
+      content="{% if page.image %}https:{{site.assets}}{{page.image}}{% else %}https:{{site.image}}{% endif %}"
+    />
+    <meta
+      property="og:image"
+      content="{% if page.image %}https:{{site.assets}}{{page.image}}{% else %}https:{{site.image}}{% endif %}"
+    />
+    <meta property="og:type" content="blog" />
+    <meta property="article:published_time" content="{{page.date}}" />
+    <meta property="article:author" content="Katy DeCorah" />
+    <meta name="p:domain_verify" content="5ec32589eebd416f82c15e20ba199848" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#fff" />
+    <link rel="me" href="https://github.com/katydecorah" />
+    <link rel="me" href="https://front-end.social/@katydecorah" />
+    <link
+      rel="webmention"
+      href="https://webmention.io/katydecorah.com/webmention"
+    />
+    <link rel="pingback" href="https://webmention.io/katydecorah.com/xmlrpc" />
+    {% feed_meta %}
+    <link
+      href="{{site.baseurl}}/assets/site.css"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
-  <body
-    class="{{layout.layout | slugify}}-page {{page.layout | slugify}}-page page-{{ page.title | slugify }}"
-  >
-    <a class="skip" href="#content">Skip to content</a>
-    {%- include post/post-meta.html -%}
-    <div class="wrapper">
-      <main
-        id="content"
-        class="{% if page.layout == 'default' %}container {% endif %}content"
-      >
-        <h1
-          class="{%- if page.hideTitle or layout.hideTitle -%}visually-hidden{%- endif -%}"
-        >
-          {{ page.title }}
-        </h1>
-        {{ content }}
-      </main>
-      {%- include layout/footer.html -%} {%- include layout/end.html -%}
-    </div>
+  <body>
+    {% if page.locations %} {% include post/post-map-header.html %} {% endif %}
+    <header>
+      <div class="container">
+        {% include shapes/one.html %}
+
+        <nav class="post-meta-breadcrumbs">
+          <ul class="">
+            <li>
+              <a class="header-title" href="{{site.url}}">Katy DeCorah</a>
+            </li>
+            {% if page.title != 'Katy DeCorah' %} {% if site.baseurl != '' %} {%
+            if page.title != site.title %}
+            <li>{% include icons/chevron-right.svg %}</li>
+            <li>
+              <a class="post-meta-link" href="{{site.baseurl}}/"
+                >{{site.title}}</a
+              >
+            </li>
+            {% endif %}
+            <li>{% include icons/chevron-right.svg %}</li>
+            <li class="post-meta-link">{{ page.title }}</li>
+            {% endif %} {% endif %}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>{{content}} {% include shapes/hr.html %}</main>
+    <footer>
+      <div class="container">
+        <div class="footer-bio">
+          <p>{% include about-me.html %}</p>
+        </div>
+        <div class="footer-links">
+          <strong>Here</strong>
+          {%- for link in site.links -%} {%- assign icon = link.icon | prepend:
+          'icons/' | append: '.svg' -%}
+          <a href="{{site.url}}{{ link.url }}" class="icon-link"
+            >{% include {{icon}} %} {{ link.text }}</a
+          >
+          {%- endfor -%}
+        </div>
+        <div class="footer-links">
+          <strong>And there</strong>
+          {%- for link in site.social_links -%} {%- assign icon = link.icon |
+          prepend: 'icons/' | append: '.svg' -%}
+          <a href="{{ link.url }}" class="icon-link"
+            >{% include {{icon}} %} {{ link.text }}</a
+          >
+          {%- endfor -%}
+        </div>
+      </div>
+    </footer>
+    {% if page.categories[0] == "code" %}
+    <script async src="https://codepen.io/assets/embed/ei.js"></script>
+    {% endif %} {% if page.title == "Search" %}
+    <script src="/assets/lunr.min.js"></script>
+    <script src="/assets/lunr-feed.js"></script>
+    {% endif %}
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-34842039-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-34842039-1");
+    </script>
   </body>
 </html>
