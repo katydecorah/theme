@@ -1,23 +1,25 @@
-{% capture src %}{{page.playlist | slugify}}.png{% endcapture %} {% include
-img.html src=src class='img-half' alt='album art' width='1000' height='1000' %}
-{% if page.spotify %}
-<p class="playlist-meta">
-  <a href="{{ page.spotify }}" class="btn"
-    >{% include icons/headphones.svg %} Listen on Spotify</a
-  >
-</p>
-{% endif %}
+<div class="playlist-container">
+  {% capture src %}{{page.playlist | slugify}}.png{% endcapture %} {% include
+  img.html src=src class='img-half' alt='album art' width='1000' height='1000'
+  %} {% if page.spotify %}
+  <p class="playlist-meta">
+    <a href="{{ page.spotify }}" class="btn"
+      >{% include icons/headphones.svg %} Listen on Spotify</a
+    >
+  </p>
+  {% endif %}
 
-<ul class="playlist">
-  {% for tracks in page.tracks %}
-  <li class="playlist-track">
-    <div class="track-name"><strong>{{ tracks.track }}</strong></div>
-    <div class="track-meta">
-      <span class="track-artist">{{ tracks.artist }} </span>
-      {% if tracks.album and tracks.album != '' %}<span class="track-album">
-        - {{ tracks.album }}</span
-      >{% endif %}
-    </div>
-  </li>
-  {% endfor %}
-</ul>
+  <ul class="playlist">
+    {% for tracks in page.tracks %}
+    <li class="playlist-track">
+      <div class="track-name"><strong>{{ tracks.track }}</strong></div>
+      <div class="track-meta">
+        <span class="track-artist">{{ tracks.artist }} </span>
+        {% if tracks.album and tracks.album != '' %}<span class="track-album">
+          - {{ tracks.album }}</span
+        >{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
