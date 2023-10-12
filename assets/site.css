@@ -223,7 +223,7 @@ footer .container {
 
 .shape-long {
   display: grid;
-  grid-template-columns: 1rem 1rem 1rem 1rem 1rem 1rem 1rem 1rem;
+  grid-template-columns: repeat(9, 1rem);
   grid-template-rows: 1rem;
   grid-gap: 1px;
   margin: 1rem auto;
