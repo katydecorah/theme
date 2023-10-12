@@ -421,16 +421,16 @@ picture {
   grid-column: span 12;
 }
 
-.playlist-container {
-  display: flex;
-  grid-gap: 2em;
-}
-
-.playlist-container .playlist {
-  flex-grow: 1;
-}
-
 @media (width >= 50rem) {
+  .playlist-container {
+    display: flex;
+    grid-gap: 2em;
+  }
+
+  .playlist-container .playlist {
+    flex-grow: 1;
+  }
+
   .playlist-media {
     max-width: 19rem;
   }
