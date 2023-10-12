@@ -1,9 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {%- if page.title != 'Katy DeCorah' -%}{{ page.title }} | Katy DeCorah{%-
+      else -%}Katy DeCorah{%- endif -%}
+    </title>
+    <meta
+      name="google-site-verification"
+      content="F5aWLWH-V1jAhith3Ybjt5dDtL4S8Yc5Z53yTvPFhaM"
+    />
+    <meta
+      name="description"
+      content="{% if page.description %}{{ page.description | truncatewords: 30 }}{% elsif page.excerpt %}{{page.excerpt | strip_html | strip_newlines | truncatewords: 30}}{% else %}{{ site.description }}{% endif %}"
+    />
+    <meta name="author" content="Katy DeCorah" />
+    {%- if page.noIndex -%}
+    <meta name="robots" content="noindex" />
+    {%- endif -%}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:site_name" content="{{site.title}}" />
+    <meta property="og:url" content="{{site.url}}{{page.url}}" />
+    <meta property="og:title" content="{{page.title}}" />
+    <meta
+      property="og:description"
+      content="{% if page.description %}{{ page.description | truncatewords: 30 }}{% elsif page.excerpt %}{{page.excerpt | strip_html | strip_newlines |  truncatewords: 30}}{% else %}{{ site.description }}{% endif %}"
+    />
+    <meta
+      name="st:image"
+      content="{% if page.image %}https:{{site.assets}}{{page.image}}{% else %}https:{{site.image}}{% endif %}"
+    />
+    <meta
+      property="og:image"
+      content="{% if page.image %}https:{{site.assets}}{{page.image}}{% else %}https:{{site.image}}{% endif %}"
+    />
+    <meta property="og:type" content="blog" />
+    <meta property="article:published_time" content="{{page.date}}" />
+    <meta property="article:author" content="Katy DeCorah" />
     <meta name="p:domain_verify" content="5ec32589eebd416f82c15e20ba199848" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#fff" />
     <link rel="me" href="https://github.com/katydecorah" />
     <link rel="me" href="https://front-end.social/@katydecorah" />
     <link
@@ -12,7 +49,6 @@
     />
     <link rel="pingback" href="https://webmention.io/katydecorah.com/xmlrpc" />
     {% feed_meta %}
-    <title>{{site.title}}</title>
     <link
       href="{{site.baseurl}}/assets/site.css"
       rel="stylesheet"
