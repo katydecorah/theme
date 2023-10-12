@@ -327,7 +327,7 @@ footer .container {
 .book-list {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   padding: 0;
   list-style: none;
   margin: 0 0 1rem;
@@ -408,7 +408,6 @@ picture {
   max-width: 500px;
 }
 
-.playlist-container,
 .photos {
   display: grid;
   grid-gap: 1em;
@@ -422,9 +421,18 @@ picture {
   grid-column: span 12;
 }
 
+.playlist-container {
+  display: flex;
+  grid-gap: 2em;
+}
+
+.playlist-container .playlist {
+  flex-grow: 1;
+}
+
 @media (width >= 50rem) {
   .playlist-media {
-    grid-column: span 8;
+    max-width: 19rem;
   }
 
   .photos .img-half {
