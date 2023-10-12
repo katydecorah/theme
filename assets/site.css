@@ -1,10 +1,11 @@
 :root {
   --bg-color: #fff;
   --font-color: #333;
-  --line-color-2: #f1f1f1;
+  --line-color: #f1f1f1;
+  --link-color: #2a689d;
+  --link-color-hover: #2a6496;
 }
 
-/* css reset */
 *,
 *::before,
 *::after {
@@ -16,7 +17,7 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--bg-color);
   color: var(--font-color);
   font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
     Arial, sans-serif;
@@ -32,7 +33,7 @@ p {
 }
 
 a {
-  color: #2a689d;
+  color: var(--link-color);
 }
 
 h1 {
@@ -63,7 +64,7 @@ h3 {
 
 a:hover,
 a:focus {
-  color: #2a6496;
+  color: var(--link-color-hover);
   text-decoration: underline;
 }
 
@@ -107,26 +108,6 @@ header .header-title:hover {
   text-decoration: none;
 }
 
-/*
-hr {
-  border-style: solid;
-  border-width: 0.25rem;
-  margin: 0.5rem 0;
-}
-*/
-hr {
-  border: none;
-}
-
-hr::after {
-  content: "------------------------------";
-  text-decoration: underline wavy #333;
-  color: transparent;
-  display: block;
-  text-align: center;
-  font-size: 2rem;
-}
-
 header ul {
   list-style: none;
   margin: 0;
@@ -136,33 +117,10 @@ header ul {
   align-items: center;
 }
 
-header .dot-paper,
-header .grid-paper {
-  min-height: 3rem;
-  width: 100%;
-}
-
-header .dot-paper {
-  margin-top: 0.5rem;
-}
-
-.dot-paper {
-  background: radial-gradient(black 15%, transparent 16%) 0 0,
-    radial-gradient(black 15%, transparent 16%) 0.5rem 0.5rem,
-    radial-gradient(rgb(255 255 255 / 10%) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgb(255 255 255 / 10%) 15%, transparent 20%) 0.5rem 0.5rem;
-  background-color: #fff;
-  background-size: 1rem 1rem;
-}
-
-.grid-paper {
-  background-color: var(--bg-color);
-  background-image: linear-gradient(var(--line-color-2) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line-color-2) 1px, transparent 1px),
-    linear-gradient(var(--line-color-2) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line-color-2) 1px, transparent 1px);
-  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
-  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+hr {
+  border-style: solid;
+  border-width: 0.25rem;
+  margin: 0.5rem 0;
 }
 
 img,
@@ -279,40 +237,27 @@ footer .container {
   grid-gap: 1px;
 }
 
-.shape-category,
 .shape-long div,
 .shape div {
   width: 1rem;
   height: 1rem;
-  background: #333;
+  background: var(--font-color);
 }
 
-.shape-code,
 .shape-1 {
   border-radius: 100% 0 0;
 }
 
-.shape-notes,
 .shape-2 {
   border-radius: 0 100% 0 0;
 }
 
-.shape-adventures,
 .shape-3 {
   border-radius: 0 0 0 100%;
 }
 
-.shape-epicurean,
 .shape-4 {
   border-radius: 0 0 100%;
-}
-
-.shape-all {
-  border-radius: 100%;
-}
-
-.shape-category {
-  flex-shrink: 0;
 }
 
 .posts {
@@ -325,7 +270,6 @@ footer .container {
   margin-bottom: 1.5rem;
 }
 
-/* media query for larger sizes */
 @media (width >= 50rem) {
   .home-layout {
     display: flex;
@@ -335,7 +279,7 @@ footer .container {
 
 .home-right,
 .home-left {
-  background-color: #fff;
+  background-color: var(--bg-color);
 }
 
 .home-right {
@@ -506,7 +450,7 @@ pre {
   overflow-x: auto;
   margin-bottom: 1rem;
   padding: 1rem;
-  background-color: #f1f1f1;
+  background-color: var(--line-color);
   border-radius: 0.25rem;
 }
 
@@ -516,7 +460,7 @@ code {
   font-weight: normal;
   font-size: 0.9rem;
   line-height: 1.5;
-  background-color: #f1f1f1;
+  background-color: var(--line-color);
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
 }
@@ -545,7 +489,7 @@ pre code {
   padding: 0.25rem 0.5rem;
   font-size: 0.9rem;
   border-radius: 0.5rem;
-  background-color: #f1f1f1;
+  background-color: var(--line-color);
 }
 
 .book-tags {
@@ -559,7 +503,7 @@ pre code {
   height: 1.75rem;
   display: flex;
   align-items: center;
-  background: #f1f1f1;
+  background: var(--line-color);
   border-radius: 100%;
   justify-content: center;
 }
