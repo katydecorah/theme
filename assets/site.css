@@ -93,6 +93,23 @@ header {
   padding-top: 1rem;
 }
 
+header .container {
+  grid-gap: 1rem;
+}
+
+header .title-container {
+  display: flex;
+  align-items: center;
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (width >= 50rem) {
+  header .title-container {
+    margin-bottom: 0;
+  }
+}
+
 header .header-title {
   color: var(--font-color);
   display: block;
