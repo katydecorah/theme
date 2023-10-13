@@ -79,17 +79,12 @@ main {
     max-width: 1000px;
     margin: 0 auto;
     padding: 1rem 2rem;
+    flex-wrap: wrap;
   }
 }
 
 header {
   padding-top: 1rem;
-}
-
-header .container {
-  display: flex;
-  align-items: center;
-  grid-gap: 1rem;
 }
 
 header .header-title {
