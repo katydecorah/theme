@@ -79,6 +79,12 @@ main {
     max-width: 1000px;
     margin: 0 auto;
     padding: 1rem 2rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
     flex-wrap: wrap;
   }
 }
