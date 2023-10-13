@@ -59,13 +59,12 @@
     {% if page.locations %} {% include post/post-map-header.html %} {% endif %}
     <header>
       <div class="container">
-        {% include shapes/one.html %}
-
+        <div class="title-container">
+          {% include shapes/one.html %}
+          <a class="header-title" href="{{site.url}}">Katy DeCorah</a>
+        </div>
         <nav class="post-meta-breadcrumbs">
-          <ul class="">
-            <li>
-              <a class="header-title" href="{{site.url}}">Katy DeCorah</a>
-            </li>
+          <ul>
             {% if page.title != 'Katy DeCorah' %} {% if site.baseurl != '' %} {%
             if page.title != site.title %}
             <li>{% include icons/chevron-right.svg %}</li>

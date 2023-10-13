@@ -135,6 +135,12 @@ header ul {
   align-items: center;
 }
 
+@media (width <= 50rem) {
+  header ul li:first-child {
+    display: none;
+  }
+}
+
 hr {
   border-style: solid;
   border-width: 0.25rem;
