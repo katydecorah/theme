@@ -89,8 +89,10 @@ main {
   }
 }
 
-header {
-  padding-top: 1rem;
+@media (width >= 50rem) {
+  header {
+    padding-top: 1rem;
+  }
 }
 
 header .container {
@@ -221,11 +223,19 @@ footer .container {
   margin-bottom: 1rem;
 }
 
+.footer-links a {
+  padding: 0.25rem 0;
+}
+
 @media (width >= 50rem) {
   .footer-links {
     display: flex;
     grid-gap: 1rem;
     justify-content: center;
+  }
+
+  .footer-links a {
+    padding: 0;
   }
 }
 
@@ -311,10 +321,18 @@ footer .container {
   min-width: 300px;
 }
 
+.nav-category a {
+  padding: 0.25rem 0;
+}
+
 @media (width >= 50rem) {
   .nav-category-container {
     display: flex;
     grid-gap: 1rem;
+  }
+
+  .nav-category a {
+    padding: 0;
   }
 }
 
