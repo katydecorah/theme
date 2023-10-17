@@ -84,9 +84,11 @@
     <main>{{content}} {% include shapes/hr.html %}</main>
     <footer>
       <div class="container">
+        {% unless page.layout == 'home' %}
         <div class="footer-bio">
           <p>{% include about-me.html %}</p>
         </div>
+        {% endunless %}
         <div class="footer-links">
           <strong>Here</strong>
           {%- for link in site.links -%} {%- assign icon = link.icon | prepend:
