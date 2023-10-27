@@ -261,7 +261,7 @@ footer .container {
   grid-template-columns: repeat(9, 1rem);
   grid-template-rows: 1rem;
   grid-gap: 1px;
-  margin: 1rem auto;
+  margin: 3rem auto 0;
   justify-content: center;
 }
 
@@ -315,10 +315,6 @@ footer .container {
 .home-right,
 .home-left {
   background-color: var(--bg-color);
-}
-
-.home-left {
-  margin-bottom: 2rem;
 }
 
 .home-right {
