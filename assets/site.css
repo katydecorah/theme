@@ -310,16 +310,16 @@ footer .container {
     display: flex;
     grid-gap: 3rem;
   }
+
+  .home-right {
+    flex-shrink: 0;
+    width: 300px;
+  }
 }
 
 .home-right,
 .home-left {
   background-color: var(--bg-color);
-}
-
-.home-right {
-  flex: 1;
-  min-width: 300px;
 }
 
 .nav-category a {
