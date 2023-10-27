@@ -216,6 +216,7 @@ footer .container {
 @media (width >= 50rem) {
   footer .container {
     text-align: center;
+    justify-content: center;
   }
 }
 
@@ -314,6 +315,10 @@ footer .container {
 .home-right,
 .home-left {
   background-color: var(--bg-color);
+}
+
+.home-left {
+  margin-bottom: 2rem;
 }
 
 .home-right {
