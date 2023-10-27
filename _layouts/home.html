@@ -22,5 +22,26 @@ layout: default
   <div class="home-right">
     <h2>Older posts</h2>
     {% include navigation-category.html %}
+    <h2 style="margin-top: 2rem">Now reading</h2>
+    {% assign nowReading = site.data['now-reading'] %}
+    <ul class="collection-items">
+      <li>
+        <div class="collection-item">
+          <div class="collection-item-img-wrapper">
+            <img
+              loading="lazy"
+              class="collection-item-img-book"
+              alt=""
+              src="https://yo.katydecorah.com/book-{{nowReading.isbn}}.png"
+              style="max-height: 9rem"
+            />
+          </div>
+          <div><strong>{{nowReading.title}}</strong></div>
+          <div class="collection-item-meta">
+            <div>by {{nowReading.authors | join: ", "}}</div>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>

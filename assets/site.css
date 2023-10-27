@@ -352,11 +352,6 @@ footer .container {
   }
 }
 
-.home-layout .nav-category {
-  flex-direction: column;
-  grid-gap: 0.25rem;
-}
-
 .nav-category li a {
   margin-bottom: 0;
   display: flex;
