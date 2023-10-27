@@ -305,10 +305,16 @@ footer .container {
   margin-bottom: 1.5rem;
 }
 
+.home-layout {
+  display: flex;
+  grid-gap: 1rem;
+  flex-direction: column;
+}
+
 @media (width >= 50rem) {
   .home-layout {
-    display: flex;
     grid-gap: 3rem;
+    flex-direction: row;
   }
 
   .home-right {
