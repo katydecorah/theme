@@ -203,7 +203,6 @@ h6 {
 
 footer {
   display: flex;
-  justify-content: center;
 }
 
 footer .container {
@@ -321,6 +320,15 @@ footer .container {
     flex-shrink: 0;
     width: 300px;
   }
+
+  .home-now-reading {
+    display: flex;
+    grid-gap: 0.5rem;
+  }
+}
+
+.home-now-reading img {
+  max-height: 9rem;
 }
 
 .home-right,

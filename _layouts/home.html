@@ -28,24 +28,16 @@ layout: default
     <p>{% include about-me.html %}</p>
     <h2 style="margin-top: 2rem">Now reading</h2>
     {% assign nowReading = site.data['now-reading'] %}
-    <ul class="collection-items">
-      <li>
-        <div class="collection-item">
-          <div class="collection-item-img-wrapper">
-            <img
-              loading="lazy"
-              class="collection-item-img-book"
-              alt=""
-              src="https://yo.katydecorah.com/book-{{nowReading.isbn}}.png"
-              style="max-height: 9rem"
-            />
-          </div>
-          <div><strong>{{nowReading.title}}</strong></div>
-          <div class="collection-item-meta">
-            <div>by {{nowReading.authors | join: ", "}}</div>
-          </div>
-        </div>
-      </li>
-    </ul>
+    <div class="home-now-reading">
+      <img
+        loading="lazy"
+        alt=""
+        src="https://yo.katydecorah.com/book-{{nowReading.isbn}}.png"
+      />
+      <div>
+        <strong>{{nowReading.title}}</strong> by {{nowReading.authors | join: ",
+        "}}
+      </div>
+    </div>
   </div>
 </div>
