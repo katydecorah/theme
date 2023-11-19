@@ -9,5 +9,5 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://katydecorah.com"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes)!i) }
 end

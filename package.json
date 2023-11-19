@@ -2,9 +2,7 @@
   "name": "theme",
   "version": "5.1.0",
   "description": "Jekyll theme for katydecorah.com",
-  "main": "index.js",
   "scripts": {
-    "pretty-quick": "pretty-quick",
     "lint": "stylelint \"assets/site.css\" --fix && eslint .",
     "test": "npm run lint"
   },
@@ -19,13 +17,13 @@
   },
   "homepage": "https://github.com/katydecorah/theme#readme",
   "devDependencies": {
-    "eslint": "^8.39.0",
-    "eslint-config-prettier": "^8.8.0",
-    "feather-icons": "^4.29.0",
-    "stylelint": "^15.10.1",
-    "stylelint-config-standard": "^33.0.0",
-    "stylelint-config-standard-scss": "^9.0.0",
-    "stylelint-scss": "^4.6.0"
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "feather-icons": "^4.29.1",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^11.1.0",
+    "stylelint-scss": "^5.3.1"
   },
   "bin": {
     "update-icons": "bin/icons.js"
