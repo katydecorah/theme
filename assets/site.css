@@ -629,14 +629,17 @@ code {
 .highlight .hll {
   background-color: #f1fa8c;
 }
+
 .highlight {
   background: #282a36;
   color: #f8f8f2;
   border-radius: 0.25rem;
 }
+
 .highlight code {
   color: #f8f8f2;
 }
+
 .highlight .c {
   color: #9db5ff;
 } /* Comment */

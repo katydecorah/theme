@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/katydecorah/theme#readme",
   "devDependencies": {
-    "eslint": "^8.54.0",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
     "feather-icons": "^4.29.1",
     "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0",
