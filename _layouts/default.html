@@ -29,11 +29,11 @@
     />
     <meta
       name="st:image"
-      content="{% if page.image %}https:{{site.assets}}{{page.image}}{% else %}https:{{site.image}}{% endif %}"
+      content="{% if page.image %}{{site.assets}}{{page.image}}{% else %}{{site.image}}{% endif %}"
     />
     <meta
       property="og:image"
-      content="{% if page.image %}https:{{site.assets}}{{page.image}}{% else %}https:{{site.image}}{% endif %}"
+      content="{% if page.image %}{{site.assets}}{{page.image}}{% else %}{{site.image}}{% endif %}"
     />
     <meta property="og:type" content="blog" />
     <meta property="article:published_time" content="{{page.date}}" />
