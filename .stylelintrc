@@ -1,5 +1,9 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-standard-scss"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "@double-great/stylelint-a11y"
+  ],
   "rules": {
     "scss/no-global-function-names": null,
     "no-descending-specificity": null,
