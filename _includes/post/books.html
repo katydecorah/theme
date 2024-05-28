@@ -16,11 +16,9 @@
     </div>
     {% else %}
     <div class="book-img">
-      <img
-        loading="lazy"
-        alt=""
-        src="https://yo.katydecorah.com/book-{{book.isbn}}.png"
-      />
+      {% capture image %}{% if book.image %}{{book.image}}{% else
+      %}book-{{book.isbn}}.png{% endif %}{% endcapture %}
+      <img loading="lazy" alt="" src="https://yo.katydecorah.com/{{image}}" />
     </div>
     <div>
       <div class="book-name"><strong>{{ book.title }}</strong></div>
