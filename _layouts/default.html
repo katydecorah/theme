@@ -58,6 +58,7 @@
   </head>
   <body>
     {% if page.locations %} {% include post/post-map-header.html %} {% endif %}
+    {% if page.layout == 'home' %}
     <header>
       <div class="container">
         <div class="title-container">
@@ -82,6 +83,7 @@
         </nav>
       </div>
     </header>
+    {% endif %}
     <main>{{content}} {% include shapes/hr.html %}</main>
     <footer>
       <div class="container">
