@@ -7,6 +7,7 @@ assign posts = site.posts %} {% else %} {% assign posts =
 site.categories[category] %} {% endif %}
 
 <div class="post-header">
+  <a href="{{site.url}}">{% include shapes/one.html %}</a>
   <h1>{{page.title}}</h1>
   <div class="nav-category-container">
     <strong>Categories</strong>{% include navigation-category.html %}
