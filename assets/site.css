@@ -21,7 +21,7 @@ body {
   color: var(--font-color);
   font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
     Arial, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -76,7 +76,7 @@ main {
 @media (width >= 50rem) {
   .container,
   main {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 1rem 2rem;
   }
