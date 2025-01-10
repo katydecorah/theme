@@ -189,7 +189,7 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .post-header .shape {
@@ -198,7 +198,7 @@ h6 {
   grid-template-rows: 1rem 1rem;
   grid-gap: 1px;
   position: relative;
-  top: -2.5rem;
+  top: -3rem;
   background: white;
   padding: 0.75rem;
   outline: 1px solid;
