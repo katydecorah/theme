@@ -17,15 +17,15 @@
   },
   "homepage": "https://github.com/katydecorah/theme#readme",
   "devDependencies": {
-    "@double-great/stylelint-a11y": "^3.0.2",
-    "@eslint/js": "^9.16.0",
-    "eslint": "^9.16.0",
+    "@double-great/stylelint-a11y": "^3.4.1",
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
     "feather-icons": "^4.29.2",
-    "globals": "^15.13.0",
-    "stylelint": "^16.11.0",
-    "stylelint-config-standard": "^36.0.1",
-    "stylelint-config-standard-scss": "^14.0.0",
-    "stylelint-scss": "^6.10.0"
+    "globals": "^16.5.0",
+    "stylelint": "^16.26.0",
+    "stylelint-config-standard": "^39.0.1",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-scss": "^6.12.1"
   },
   "bin": {
     "update-icons": "bin/icons.js"
