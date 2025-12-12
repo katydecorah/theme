@@ -2,10 +2,12 @@
   <div class="playlist-media">
     {% capture src %}{{page.playlist | slugify}}.png{% endcapture %} {% include
     img.html src=src class='img-half' alt='album art' width='1000' height='1000'
-    %} {% if page.spotify %}
+    %} {% if page.spotify or page.apple %}{% assign link_url = page.spotify |
+    default: page.apple %}
     <p class="playlist-meta">
-      <a href="{{ page.spotify }}" class="btn"
-        >{% include icons/headphones.svg %} Listen on Spotify</a
+      <a href="{{ link_url }}" class="btn"
+        >{% include icons/headphones.svg %} Listen on {% if page.spotify
+        %}Spotify{% else %}Apple Music{% endif %}</a
       >
     </p>
     {% endif %}
