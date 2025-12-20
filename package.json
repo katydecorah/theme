@@ -1,6 +1,6 @@
 {
   "name": "theme",
-  "version": "5.8.0",
+  "version": "5.8.1",
   "description": "Jekyll theme for katydecorah.com",
   "scripts": {
     "lint": "stylelint \"assets/site.css\" --fix && eslint .",
